@@ -4,67 +4,20 @@ from flask import Flask, request, jsonify, render_template, session, redirect, u
 import sqlite3
 import hashlib
 import os
+import csv
 import smtplib
+import threading
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 app = Flask(__name__)
+app.secret_key = os.getenv('SECRET_KEY', 'cpoe_secret_key_rknec_2024')
 
-# Auto-create database if it doesn't exist
-import csv
-def init_db():
-    conn = sqlite3.connect(os.path.join(os.path.dirname(__file__), 'hospital.db'))
-    cursor = conn.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS users (
-        user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL, email TEXT UNIQUE NOT NULL,
-        password TEXT NOT NULL, role TEXT DEFAULT 'Doctor',
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS patients (
-        patient_id TEXT PRIMARY KEY, age INTEGER, gender TEXT,
-        condition TEXT, current_drug TEXT, dosage_mg INTEGER,
-        side_effects TEXT, allergy_class TEXT, max_safe_dose INTEGER,
-        interacts_with TEXT, clinical_warning TEXT)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS drugs (
-        drug_id INTEGER PRIMARY KEY AUTOINCREMENT,
-        drug_name TEXT UNIQUE, allergy_class TEXT,
-        max_safe_dose INTEGER, interacts_with TEXT, clinical_warning TEXT)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS orders (
-        order_id INTEGER PRIMARY KEY AUTOINCREMENT,
-        patient_id TEXT, ordered_drug TEXT, ordered_dose INTEGER,
-        status TEXT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS alerts (
-        alert_id INTEGER PRIMARY KEY AUTOINCREMENT,
-        patient_id TEXT, ordered_drug TEXT, alert_type TEXT,
-        alert_message TEXT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
-
-    cursor.execute('SELECT COUNT(*) FROM patients')
-    if cursor.fetchone()[0] == 0:
-        csv_path = os.path.join(os.path.dirname(__file__), 'real_drug_dataset_updated.csv')
-        if os.path.exists(csv_path):
-            with open(csv_path, encoding='utf-8-sig') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    cursor.execute('''INSERT INTO patients VALUES
-                        (?,?,?,?,?,?,?,?,?,?,?)''', (
-                        row['Patient_ID'], int(row['Age']), row['Gender'],
-                        row['Condition'], row['Drug_Name'], int(row['Dosage_mg']),
-                        row['Side_Effects'], row['Allergy_Class'],
-                        int(row['Max_Safe_Dose_mg']), row['Interacts_With'],
-                        row['Clinical_Warning']))
-    conn.commit()
-    conn.close()
-
-init_db()
-
-app.secret_key = 'cpoe_secret_key_rknec_2024'
-
-# ── Email config — fill these in ─────────────────────────────────
+# ── Email config — loaded from .env ──────────────────────────────
 from dotenv import load_dotenv
 load_dotenv()
-
-SENDER_EMAIL    = os.getenv('SENDER_EMAIL')
-SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
+SENDER_EMAIL    = os.getenv('SENDER_EMAIL', '')
+SENDER_PASSWORD = os.getenv('SENDER_PASSWORD', '')
 
 # ── Helper: send welcome email ────────────────────────────────────
 def send_welcome_email(to_email, name, role):
@@ -177,7 +130,7 @@ def send_welcome_email(to_email, name, role):
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="center">
-                                            <a href="http://127.0.0.1:5000"
+                                            <a href="https://rxshield.onrender.com"
                                                style="display:inline-block; background:#1E7F8C;
                                                       color:#ffffff; text-decoration:none;
                                                       padding:14px 36px; border-radius:9px;
@@ -229,6 +182,12 @@ def send_welcome_email(to_email, name, role):
     except Exception as e:
         # Email failing should NOT break signup — just log it
         print(f"⚠️ Email failed: {e}")
+
+def send_welcome_email_async(to_email, name, role):
+    """Send email in background thread so signup is never blocked"""
+    thread = threading.Thread(target=send_welcome_email, args=(to_email, name, role))
+    thread.daemon = True
+    thread.start()
 
 # ── Helper: connect to database ───────────────────────────────────
 def get_db():
@@ -305,8 +264,8 @@ def signup():
     session['user_role'] = user['role']
     conn.close()
 
-    # Send welcome email in background
-    send_welcome_email(email, name, role)
+    # Send welcome email in background — never blocks signup
+    send_welcome_email_async(email, name, role)
 
     return jsonify({'status': 'success', 'message': f'Welcome, {name}!'})
 
