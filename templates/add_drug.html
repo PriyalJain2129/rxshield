@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Drug — MedGuard CPOE</title>
+    {% include 'styles.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="container" style="max-width:680px;">
+    <div class="card">
+        <h2>💊 Add New Drug</h2>
+        <p class="subtitle">Add a drug to the clinical safety database</p>
+
+        <div class="form-group">
+            <label>Drug Name</label>
+            <input type="text" id="drug_name" placeholder="e.g. Warfarin">
+        </div>
+        <div class="form-group">
+            <label>Allergy Class</label>
+            <input type="text" id="allergy_class" placeholder="e.g. Anticoagulant, NSAID, SSRI">
+        </div>
+        <div class="form-group">
+            <label>Max Safe Dose (mg)</label>
+            <input type="number" id="max_safe_dose" placeholder="e.g. 10">
+        </div>
+        <div class="form-group">
+            <label>Interacts With (separate with |)</label>
+            <input type="text" id="interacts_with" placeholder="e.g. Aspirin|Ibuprofen|Amoxicillin">
+        </div>
+        <div class="form-group">
+            <label>Clinical Warning</label>
+            <input type="text" id="clinical_warning" placeholder="e.g. Monitor INR regularly. Risk of bleeding.">
+        </div>
+
+        <button class="btn btn-primary" onclick="saveDrug()" id="saveBtn">
+            💾 Save Drug
+        </button>
+
+        <div id="result" style="display:none; margin-top:20px; padding:14px 16px; border-radius:9px;"></div>
+    </div>
+</div>
+
+<script>
+async function saveDrug() {
+    const fields = ['drug_name','allergy_class','max_safe_dose','interacts_with','clinical_warning'];
+    for (let f of fields) {
+        if (!document.getElementById(f).value) { alert('Please fill all fields!'); return; }
+    }
+    const btn = document.getElementById('saveBtn');
+    btn.textContent = '⏳ Saving...'; btn.disabled = true;
+
+    const res  = await fetch('/save-drug', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            drug_name: document.getElementById('drug_name').value,
+            allergy_class: document.getElementById('allergy_class').value,
+            max_safe_dose: document.getElementById('max_safe_dose').value,
+            interacts_with: document.getElementById('interacts_with').value,
+            clinical_warning: document.getElementById('clinical_warning').value,
+        })
+    });
+    const data = await res.json();
+    const box  = document.getElementById('result');
+    if (data.status === 'success') {
+        box.style.cssText = 'display:block; padding:14px 16px; border-radius:9px; background:#eafaf1; border:1px solid #a9dfbf; color:#1e8449; margin-top:20px;';
+        box.innerHTML = `✅ ${data.message}`;
+        document.querySelectorAll('input').forEach(el => el.value = '');
+    } else {
+        box.style.cssText = 'display:block; padding:14px 16px; border-radius:9px; background:#fdf0ef; border:1px solid #f5c6cb; color:#c0392b; margin-top:20px;';
+        box.innerHTML = `❌ ${data.message}`;
+    }
+    btn.textContent = '💾 Save Drug'; btn.disabled = false;
+}
+</script>
+</body>
+</html>

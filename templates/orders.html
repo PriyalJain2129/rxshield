@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders — MedGuard CPOE</title>
+    {% include 'styles.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="container">
+    <div class="page-header">
+        <div>
+            <h1>📋 All Orders</h1>
+            <p>Complete history of submitted medication orders</p>
+        </div>
+        <a href="/" class="btn btn-primary" style="width:auto; padding:10px 20px; font-size:13.5px;">
+            ➕ New Order
+        </a>
+    </div>
+    <div class="card" style="padding: 0; overflow:hidden;">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Patient ID</th>
+                        <th>Drug Ordered</th>
+                        <th>Dose (mg)</th>
+                        <th>Status</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for o in orders %}
+                    <tr>
+                        <td style="color:var(--subtext);">{{ o['order_id'] }}</td>
+                        <td><strong>{{ o['patient_id'] }}</strong></td>
+                        <td>{{ o['ordered_drug'] }}</td>
+                        <td>{{ o['ordered_dose'] }} mg</td>
+                        <td>
+                            <span class="badge {{ 'badge-safe' if o['status'] == 'APPROVED' else 'badge-danger' }}">
+                                {{ '✅ ' if o['status'] == 'APPROVED' else '🚨 ' }}{{ o['status'] }}
+                            </span>
+                        </td>
+                        <td style="color:var(--subtext); font-size:12.5px;">{{ o['timestamp'] }}</td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="6" style="text-align:center; padding:40px; color:var(--subtext);">
+                        No orders yet. <a href="/" style="color:var(--c4);">Submit your first order →</a>
+                    </td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

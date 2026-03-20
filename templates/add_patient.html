@@ -1,0 +1,115 @@
+<!-- ═══════════════════════════════════════════════════════════
+     FILE: templates/add_patient.html
+═══════════════════════════════════════════════════════════ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient — MedGuard CPOE</title>
+    {% include 'styles.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="container" style="max-width:680px;">
+    <div class="card">
+        <h2>👤 Add New Patient</h2>
+        <p class="subtitle">Register a new patient in the system</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 20px;">
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" id="age" placeholder="e.g. 45">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="gender">
+                    <option value="">— Select —</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Condition / Diagnosis</label>
+            <input type="text" id="condition" placeholder="e.g. Diabetes, Hypertension, Infection">
+        </div>
+        <div class="form-group">
+            <label>Current Medication</label>
+            <input type="text" id="current_drug" placeholder="e.g. Metformin">
+        </div>
+        <div class="form-group">
+            <label>Current Dosage (mg)</label>
+            <input type="number" id="dosage_mg" placeholder="e.g. 500">
+        </div>
+        <div class="form-group">
+            <label>Known Allergy Class</label>
+            <input type="text" id="allergy_class" placeholder="e.g. Penicillin, NSAID, SSRI">
+        </div>
+        <div class="form-group">
+            <label>Max Safe Dose of Current Drug (mg)</label>
+            <input type="number" id="max_safe_dose" placeholder="e.g. 1000">
+        </div>
+        <div class="form-group">
+            <label>Drug Interactions (separate with |)</label>
+            <input type="text" id="interacts_with" placeholder="e.g. Aspirin|Warfarin|Alcohol">
+        </div>
+        <div class="form-group">
+            <label>Clinical Warning</label>
+            <input type="text" id="clinical_warning" placeholder="e.g. Avoid in renal impairment">
+        </div>
+        <div class="form-group">
+            <label>Known Side Effects</label>
+            <input type="text" id="side_effects" placeholder="e.g. Nausea, Headache">
+        </div>
+
+        <button class="btn btn-primary" onclick="savePatient()" id="saveBtn">
+            💾 Save Patient
+        </button>
+
+        <div id="result" style="display:none; margin-top:20px; padding:14px 16px; border-radius:9px;"></div>
+    </div>
+</div>
+
+<script>
+async function savePatient() {
+    const fields = ['age','gender','condition','current_drug','dosage_mg','allergy_class','max_safe_dose','interacts_with'];
+    for (let f of fields) {
+        if (!document.getElementById(f).value) { alert('Please fill all required fields!'); return; }
+    }
+    const btn = document.getElementById('saveBtn');
+    btn.textContent = '⏳ Saving...'; btn.disabled = true;
+
+    const res  = await fetch('/save-patient', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            age: document.getElementById('age').value,
+            gender: document.getElementById('gender').value,
+            condition: document.getElementById('condition').value,
+            current_drug: document.getElementById('current_drug').value,
+            dosage_mg: document.getElementById('dosage_mg').value,
+            allergy_class: document.getElementById('allergy_class').value,
+            max_safe_dose: document.getElementById('max_safe_dose').value,
+            interacts_with: document.getElementById('interacts_with').value,
+            clinical_warning: document.getElementById('clinical_warning').value,
+            side_effects: document.getElementById('side_effects').value,
+        })
+    });
+    const data = await res.json();
+    const box  = document.getElementById('result');
+    box.style.display = 'block';
+    if (data.status === 'success') {
+        box.style.cssText = 'display:block; padding:14px 16px; border-radius:9px; background:#eafaf1; border:1px solid #a9dfbf; color:#1e8449; margin-top:20px;';
+        box.innerHTML = `✅ ${data.message} — Patient ID: <strong>${data.patient_id}</strong>`;
+        document.querySelectorAll('input, select').forEach(el => el.value = '');
+    } else {
+        box.style.cssText = 'display:block; padding:14px 16px; border-radius:9px; background:#fdf0ef; border:1px solid #f5c6cb; color:#c0392b; margin-top:20px;';
+        box.innerHTML = `❌ ${data.message}`;
+    }
+    btn.textContent = '💾 Save Patient'; btn.disabled = false;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1001 @@
+Patient_ID,Age,Gender,Condition,Drug_Name,Dosage_mg,Treatment_Duration_days,Side_Effects,Improvement_Score,Allergy_Class,Max_Safe_Dose_mg,Interacts_With,Clinical_Warning
+P0001,56,Male,Infection,Ciprofloxacin,50,9,Nausea,8.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0002,69,Male,Hypertension,Metoprolol,500,24,Tiredness,8.7,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0003,46,Female,Depression,Bupropion,100,25,Dry mouth,5.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0004,32,Male,Diabetes,Glipizide,850,44,Low blood sugar,6.4,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0005,60,Male,Depression,Bupropion,850,35,Anxiety,5.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0006,25,Female,Infection,Ciprofloxacin,850,50,Dizziness,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0007,78,Male,Diabetes,Glipizide,250,40,Nausea,6.5,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0008,38,Male,Pain Relief,Paracetamol,100,15,Liver issues,8.2,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0009,56,Male,Depression,Escitalopram,850,56,Nausea,9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0010,75,Male,Diabetes,Metformin,850,19,Nausea,9.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0011,36,Male,Depression,Bupropion,50,23,Headache,6.2,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0012,40,Female,Diabetes,Glipizide,500,11,Nausea,6.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0013,28,Male,Hypertension,Amlodipine,50,55,Dizziness,4.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0014,28,Male,Depression,Bupropion,250,32,Dry mouth,5.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0015,41,Male,Pain Relief,Ibuprofen,850,55,Nausea,8.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0016,70,Male,Pain Relief,Tramadol,50,47,Dizziness,9.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0017,53,Male,Infection,Azithromycin,50,9,Abdominal pain,5.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0018,57,Female,Diabetes,Glipizide,100,9,Low blood sugar,6.1,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0019,41,Male,Depression,Sertraline,500,34,Dry mouth,7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0020,20,Female,Infection,Azithromycin,50,58,Nausea,7.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0021,39,Female,Depression,Bupropion,100,36,Anxiety,5.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0022,70,Male,Diabetes,Insulin Glargine,500,12,Low sugar,7.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0023,19,Male,Pain Relief,Paracetamol,850,14,Liver issues,6.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0024,41,Male,Hypertension,Losartan,100,42,Back pain,7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0025,61,Male,Pain Relief,Tramadol,850,51,Nausea,7.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0026,47,Female,Infection,Ciprofloxacin,500,36,Dizziness,7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0027,55,Male,Hypertension,Metoprolol,500,52,Tiredness,6.3,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0028,19,Male,Infection,Ciprofloxacin,100,32,Nausea,6.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0029,77,Male,Diabetes,Glipizide,50,21,Skin rash,6.9,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0030,38,Male,Hypertension,Metoprolol,100,35,Tiredness,6.4,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0031,50,Male,Infection,Ciprofloxacin,100,12,Dizziness,6.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0032,29,Male,Diabetes,Insulin Glargine,850,44,Weight gain,9.4,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0033,75,Female,Pain Relief,Paracetamol,500,29,Liver issues,7.8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0034,39,Female,Diabetes,Glipizide,100,13,Low blood sugar,6.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0035,78,Male,Depression,Sertraline,250,6,Insomnia,8,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0036,61,Male,Diabetes,Glipizide,500,19,Low blood sugar,6.5,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0037,42,Male,Diabetes,Glipizide,50,54,Low blood sugar,8.8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0038,66,Female,Depression,Bupropion,100,7,Headache,7.6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0039,44,Male,Infection,Ciprofloxacin,500,53,Nausea,6.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0040,76,Female,Infection,Amoxicillin,250,40,Diarrhea,7.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0041,59,Male,Diabetes,Insulin Glargine,850,8,Weight gain,4.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0042,45,Male,Depression,Escitalopram,500,18,Sweating,5.3,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0043,77,Male,Depression,Sertraline,850,45,Insomnia,5.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0044,33,Male,Pain Relief,Tramadol,250,45,Constipation,7.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0045,32,Female,Infection,Amoxicillin,850,29,Allergy,9.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0046,79,Female,Hypertension,Amlodipine,50,59,Fatigue,10,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0047,79,Male,Infection,Amoxicillin,500,54,Rash,8,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0048,64,Male,Infection,Azithromycin,500,14,Headache,7.8,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0049,79,Female,Pain Relief,Tramadol,850,25,Constipation,4.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0050,68,Female,Hypertension,Amlodipine,100,40,Swelling,6.2,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0051,61,Female,Pain Relief,Paracetamol,850,16,Liver issues,5.8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0052,72,Female,Hypertension,Amlodipine,50,31,Dizziness,6.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0053,69,Male,Diabetes,Glipizide,50,44,Low blood sugar,6.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0054,74,Female,Hypertension,Metoprolol,850,6,Dizziness,6.3,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0055,20,Male,Pain Relief,Ibuprofen,50,58,Nausea,4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0056,54,Female,Infection,Azithromycin,250,17,Abdominal pain,8.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0057,68,Female,Hypertension,Metoprolol,100,57,Dizziness,5.4,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0058,24,Female,Hypertension,Losartan,100,36,Cough,7.4,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0059,38,Female,Depression,Bupropion,850,35,Dry mouth,10,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0060,26,Female,Infection,Ciprofloxacin,250,20,Nausea,5.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0061,56,Male,Diabetes,Insulin Glargine,500,36,Weight gain,3.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0062,35,Male,Pain Relief,Tramadol,500,36,Dizziness,6.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0063,21,Female,Diabetes,Glipizide,250,38,Low blood sugar,8.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0064,42,Female,Infection,Amoxicillin,500,15,Rash,9.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0065,77,Male,Hypertension,Amlodipine,500,14,Dizziness,5.2,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0066,31,Female,Hypertension,Amlodipine,850,19,Fatigue,7.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0067,67,Female,Infection,Ciprofloxacin,100,21,Joint pain,6.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0068,75,Male,Hypertension,Metoprolol,850,44,Tiredness,6.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0069,26,Female,Hypertension,Amlodipine,50,22,Swelling,10,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0070,43,Female,Hypertension,Amlodipine,100,59,Fatigue,4.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0071,70,Male,Pain Relief,Tramadol,50,13,Dizziness,7.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0072,19,Male,Pain Relief,Paracetamol,250,29,Fatigue,7.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0073,37,Male,Depression,Escitalopram,250,44,Sweating,8.6,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0074,45,Female,Diabetes,Metformin,500,18,Nausea,7.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0075,64,Male,Infection,Ciprofloxacin,850,29,Joint pain,7.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0076,77,Male,Infection,Ciprofloxacin,50,54,Joint pain,6.4,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0077,24,Male,Infection,Amoxicillin,100,26,Diarrhea,7.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0078,61,Male,Depression,Bupropion,850,56,Headache,6.5,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0079,78,Male,Pain Relief,Paracetamol,50,34,Rash,7.9,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0080,25,Male,Depression,Bupropion,50,24,Anxiety,6.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0081,64,Female,Infection,Azithromycin,850,25,Nausea,7.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0082,52,Female,Diabetes,Metformin,500,48,Stomach upset,7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0083,31,Male,Hypertension,Losartan,850,36,Back pain,8.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0084,34,Male,Pain Relief,Tramadol,500,55,Constipation,6.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0085,53,Male,Pain Relief,Tramadol,850,50,Constipation,4.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0086,67,Female,Depression,Bupropion,50,53,Anxiety,8.9,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0087,57,Female,Pain Relief,Tramadol,100,25,Nausea,5.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0088,21,Female,Infection,Ciprofloxacin,850,39,Joint pain,6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0089,19,Female,Infection,Ciprofloxacin,500,36,Nausea,6.1,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0090,79,Female,Depression,Sertraline,850,34,Dry mouth,9.1,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0091,23,Female,Infection,Ciprofloxacin,50,59,Nausea,3.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0092,71,Female,Diabetes,Insulin Glargine,850,43,Weight gain,10,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0093,59,Female,Depression,Sertraline,100,53,Drowsiness,8.6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0094,21,Female,Diabetes,Insulin Glargine,100,16,Injection site pain,7.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0095,71,Male,Hypertension,Amlodipine,50,45,Fatigue,6.9,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0096,46,Male,Diabetes,Metformin,250,51,Diarrhea,7.4,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0097,35,Male,Hypertension,Amlodipine,250,22,Fatigue,7.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0098,43,Male,Hypertension,Losartan,250,25,Headache,8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0099,61,Female,Diabetes,Glipizide,500,17,Skin rash,7.8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0100,51,Female,Depression,Bupropion,850,25,Anxiety,7.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0101,27,Male,Infection,Amoxicillin,250,12,Allergy,6.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0102,79,Female,Infection,Amoxicillin,850,50,Diarrhea,6.8,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0103,53,Male,Hypertension,Amlodipine,500,44,Fatigue,6.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0104,31,Female,Hypertension,Losartan,50,50,Cough,8.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0105,48,Male,Depression,Sertraline,850,11,Dry mouth,7.9,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0106,65,Female,Pain Relief,Tramadol,250,27,Nausea,2.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0107,32,Female,Diabetes,Insulin Glargine,100,48,Low sugar,8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0108,25,Male,Hypertension,Losartan,100,36,Back pain,7.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0109,31,Female,Infection,Amoxicillin,850,15,Rash,7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0110,40,Male,Depression,Bupropion,100,26,Anxiety,6.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0111,77,Male,Diabetes,Insulin Glargine,500,26,Injection site pain,8.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0112,74,Male,Depression,Bupropion,100,47,Headache,8.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0113,79,Male,Diabetes,Glipizide,850,29,Skin rash,5.8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0114,57,Female,Diabetes,Metformin,250,26,Stomach upset,7.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0115,38,Female,Hypertension,Amlodipine,50,32,Dizziness,5.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0116,33,Female,Depression,Escitalopram,850,33,Sleep issues,4.9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0117,62,Male,Depression,Escitalopram,100,17,Sleep issues,6.1,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0118,35,Female,Infection,Azithromycin,50,22,Headache,8.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0119,64,Male,Infection,Azithromycin,50,6,Headache,8.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0120,70,Female,Hypertension,Amlodipine,500,33,Fatigue,7.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0121,41,Female,Hypertension,Losartan,100,25,Back pain,8.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0122,43,Female,Pain Relief,Tramadol,50,19,Nausea,7.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0123,42,Male,Infection,Azithromycin,50,56,Headache,6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0124,77,Female,Diabetes,Insulin Glargine,250,31,Low sugar,7.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0125,77,Female,Depression,Sertraline,50,54,Drowsiness,8.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0126,77,Male,Hypertension,Losartan,500,35,Cough,8.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0127,62,Female,Depression,Escitalopram,500,19,Sleep issues,8.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0128,58,Male,Depression,Escitalopram,850,55,Sleep issues,8.1,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0129,46,Female,Pain Relief,Tramadol,500,27,Dizziness,7.5,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0130,32,Male,Infection,Amoxicillin,250,28,Diarrhea,8.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0131,62,Male,Hypertension,Metoprolol,500,48,Dizziness,7,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0132,18,Female,Depression,Sertraline,50,17,Insomnia,5.7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0133,42,Male,Hypertension,Metoprolol,250,26,Dizziness,6.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0134,24,Male,Diabetes,Glipizide,850,47,Nausea,5.9,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0135,26,Male,Pain Relief,Tramadol,500,41,Nausea,6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0136,41,Male,Diabetes,Insulin Glargine,50,37,Weight gain,6.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0137,18,Male,Hypertension,Amlodipine,100,7,Swelling,5.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0138,61,Male,Hypertension,Amlodipine,500,58,Dizziness,6.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0139,25,Female,Infection,Azithromycin,100,23,Nausea,4.2,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0140,41,Male,Depression,Sertraline,100,27,Insomnia,7.3,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0141,28,Male,Depression,Escitalopram,100,33,Sweating,7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0142,68,Female,Diabetes,Insulin Glargine,500,34,Weight gain,5.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0143,34,Female,Pain Relief,Paracetamol,500,43,Fatigue,8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0144,25,Female,Depression,Sertraline,100,48,Drowsiness,8.4,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0145,52,Female,Infection,Azithromycin,100,51,Nausea,4.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0146,52,Female,Diabetes,Metformin,250,29,Stomach upset,5.9,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0147,50,Female,Diabetes,Glipizide,850,41,Low blood sugar,5.8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0148,76,Female,Infection,Ciprofloxacin,250,51,Joint pain,5.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0149,22,Male,Pain Relief,Tramadol,250,12,Constipation,8.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0150,59,Male,Infection,Ciprofloxacin,850,46,Dizziness,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0151,56,Female,Pain Relief,Tramadol,500,20,Constipation,6.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0152,75,Male,Infection,Amoxicillin,100,12,Diarrhea,4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0153,58,Male,Infection,Azithromycin,500,5,Nausea,8,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0154,45,Male,Hypertension,Amlodipine,250,48,Swelling,5.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0155,24,Female,Diabetes,Glipizide,850,9,Low blood sugar,7.1,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0156,26,Female,Infection,Ciprofloxacin,50,7,Nausea,7.4,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0157,25,Male,Infection,Amoxicillin,50,5,Rash,9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0158,29,Female,Depression,Sertraline,850,8,Insomnia,5,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0159,51,Male,Diabetes,Insulin Glargine,100,44,Weight gain,2.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0160,50,Male,Depression,Bupropion,250,39,Headache,7.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0161,65,Male,Diabetes,Glipizide,850,36,Low blood sugar,9.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0162,72,Male,Depression,Sertraline,250,46,Dry mouth,8.9,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0163,40,Female,Infection,Amoxicillin,500,38,Rash,7.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0164,79,Female,Infection,Azithromycin,250,47,Headache,6.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0165,41,Female,Hypertension,Metoprolol,500,29,Dizziness,8.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0166,54,Male,Depression,Sertraline,100,14,Insomnia,5.5,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0167,52,Female,Pain Relief,Ibuprofen,500,25,Stomach pain,7.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0168,61,Male,Hypertension,Metoprolol,500,50,Dizziness,7.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0169,57,Female,Depression,Sertraline,250,43,Drowsiness,8.6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0170,39,Male,Depression,Sertraline,850,31,Insomnia,10,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0171,44,Male,Hypertension,Losartan,250,31,Cough,7.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0172,52,Male,Infection,Ciprofloxacin,500,6,Joint pain,6.2,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0173,18,Female,Depression,Bupropion,100,45,Dry mouth,7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0174,52,Female,Infection,Amoxicillin,850,52,Diarrhea,4.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0175,54,Female,Hypertension,Losartan,250,17,Headache,6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0176,64,Female,Infection,Azithromycin,250,13,Headache,6.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0177,31,Male,Diabetes,Glipizide,850,56,Skin rash,6.2,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0178,20,Female,Pain Relief,Paracetamol,50,40,Liver issues,7.2,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0179,18,Female,Depression,Escitalopram,100,26,Sweating,5.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0180,22,Male,Pain Relief,Ibuprofen,100,46,Stomach pain,8.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0181,43,Male,Infection,Amoxicillin,100,30,Allergy,7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0182,72,Male,Depression,Bupropion,50,58,Anxiety,7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0183,31,Female,Infection,Azithromycin,500,16,Abdominal pain,6.5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0184,56,Male,Diabetes,Metformin,250,21,Nausea,7.2,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0185,44,Male,Hypertension,Metoprolol,50,18,Dizziness,8.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0186,26,Male,Depression,Sertraline,100,18,Drowsiness,5.7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0187,32,Female,Diabetes,Insulin Glargine,250,38,Weight gain,6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0188,32,Male,Diabetes,Insulin Glargine,250,57,Weight gain,6.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0189,43,Female,Depression,Bupropion,100,24,Dry mouth,5,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0190,59,Female,Infection,Azithromycin,250,15,Headache,5.8,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0191,77,Male,Diabetes,Metformin,250,20,Stomach upset,6.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0192,30,Male,Pain Relief,Tramadol,500,55,Constipation,8.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0193,68,Female,Diabetes,Insulin Glargine,50,35,Injection site pain,7.4,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0194,49,Male,Infection,Amoxicillin,100,59,Diarrhea,7.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0195,56,Male,Infection,Azithromycin,500,10,Abdominal pain,8.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0196,66,Female,Pain Relief,Tramadol,100,23,Nausea,6.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0197,69,Female,Diabetes,Glipizide,250,41,Skin rash,7.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0198,78,Male,Infection,Azithromycin,100,8,Nausea,6.8,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0199,49,Female,Depression,Escitalopram,250,51,Nausea,7.4,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0200,21,Male,Hypertension,Amlodipine,50,8,Dizziness,6.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0201,47,Male,Hypertension,Losartan,500,24,Headache,3.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0202,54,Male,Hypertension,Metoprolol,100,14,Dizziness,6.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0203,40,Female,Diabetes,Insulin Glargine,850,28,Injection site pain,9.1,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0204,56,Male,Pain Relief,Ibuprofen,250,58,Stomach pain,8.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0205,62,Male,Infection,Amoxicillin,500,39,Allergy,8.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0206,32,Male,Depression,Escitalopram,850,30,Sweating,8.9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0207,60,Female,Depression,Bupropion,500,41,Anxiety,7.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0208,46,Female,Diabetes,Glipizide,50,42,Low blood sugar,7.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0209,53,Female,Hypertension,Metoprolol,850,25,Dizziness,6.1,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0210,30,Female,Diabetes,Insulin Glargine,850,58,Injection site pain,6.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0211,49,Female,Pain Relief,Tramadol,50,44,Constipation,7.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0212,24,Male,Pain Relief,Tramadol,100,43,Nausea,8.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0213,76,Female,Infection,Amoxicillin,50,25,Diarrhea,6.8,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0214,68,Female,Infection,Azithromycin,500,14,Nausea,6.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0215,39,Female,Pain Relief,Ibuprofen,100,42,Nausea,7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0216,45,Male,Pain Relief,Tramadol,50,50,Dizziness,7.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0217,19,Female,Pain Relief,Tramadol,250,8,Constipation,4.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0218,59,Female,Diabetes,Metformin,50,49,Nausea,3.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0219,62,Male,Pain Relief,Tramadol,500,24,Dizziness,6.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0220,79,Female,Depression,Escitalopram,500,21,Nausea,5.2,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0221,74,Male,Hypertension,Metoprolol,100,59,Tiredness,6.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0222,70,Male,Pain Relief,Tramadol,50,11,Constipation,6.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0223,23,Male,Hypertension,Amlodipine,250,8,Swelling,6.3,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0224,45,Male,Diabetes,Insulin Glargine,100,33,Low sugar,9.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0225,45,Male,Hypertension,Losartan,850,18,Cough,7.5,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0226,61,Female,Diabetes,Metformin,250,7,Stomach upset,7.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0227,61,Male,Depression,Escitalopram,100,28,Nausea,7.9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0228,37,Male,Diabetes,Metformin,250,41,Diarrhea,5.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0229,47,Female,Diabetes,Insulin Glargine,500,20,Injection site pain,8.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0230,79,Male,Infection,Ciprofloxacin,100,59,Nausea,6.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0231,28,Female,Pain Relief,Paracetamol,500,56,Liver issues,8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0232,75,Female,Pain Relief,Tramadol,500,8,Nausea,5.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0233,72,Female,Depression,Bupropion,250,28,Anxiety,4.7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0234,45,Male,Depression,Escitalopram,250,38,Sleep issues,8.2,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0235,42,Male,Pain Relief,Paracetamol,500,34,Fatigue,7.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0236,56,Male,Infection,Azithromycin,50,22,Headache,5.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0237,79,Female,Pain Relief,Ibuprofen,50,23,Stomach pain,5.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0238,50,Male,Infection,Azithromycin,850,35,Nausea,8.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0239,18,Male,Depression,Sertraline,50,23,Drowsiness,5.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0240,74,Male,Hypertension,Losartan,100,53,Back pain,9.5,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0241,44,Female,Depression,Bupropion,50,50,Headache,5.6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0242,79,Female,Depression,Bupropion,850,23,Anxiety,8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0243,74,Male,Diabetes,Metformin,100,26,Diarrhea,6.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0244,69,Male,Diabetes,Insulin Glargine,850,28,Low sugar,7.9,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0245,30,Male,Diabetes,Glipizide,50,49,Low blood sugar,6.2,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0246,58,Male,Diabetes,Insulin Glargine,250,16,Injection site pain,6.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0247,20,Female,Infection,Azithromycin,50,34,Abdominal pain,7.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0248,56,Female,Pain Relief,Tramadol,50,42,Nausea,5.5,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0249,23,Female,Hypertension,Metoprolol,500,57,Slow heartbeat,8.1,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0250,25,Female,Depression,Sertraline,50,35,Insomnia,6.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0251,44,Male,Infection,Ciprofloxacin,850,40,Dizziness,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0252,26,Male,Hypertension,Amlodipine,50,23,Fatigue,5.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0253,79,Male,Infection,Azithromycin,50,52,Nausea,3.2,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0254,54,Female,Infection,Ciprofloxacin,250,49,Joint pain,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0255,50,Male,Depression,Sertraline,850,40,Dry mouth,10,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0256,68,Female,Pain Relief,Ibuprofen,100,34,Stomach pain,8.2,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0257,59,Female,Diabetes,Glipizide,850,59,Skin rash,7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0258,61,Male,Pain Relief,Tramadol,500,53,Constipation,6.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0259,41,Male,Depression,Sertraline,50,59,Dry mouth,7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0260,32,Male,Depression,Escitalopram,50,37,Sleep issues,7.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0261,76,Female,Depression,Bupropion,500,22,Dry mouth,5.2,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0262,71,Male,Hypertension,Amlodipine,100,56,Dizziness,8.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0263,49,Female,Pain Relief,Ibuprofen,500,53,Nausea,8.1,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0264,49,Male,Pain Relief,Tramadol,250,32,Nausea,8.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0265,41,Female,Infection,Azithromycin,850,51,Headache,7.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0266,58,Female,Infection,Ciprofloxacin,500,15,Nausea,7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0267,69,Male,Infection,Ciprofloxacin,500,58,Joint pain,8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0268,66,Female,Depression,Escitalopram,50,49,Nausea,7.9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0269,79,Female,Pain Relief,Tramadol,500,37,Constipation,6.5,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0270,66,Male,Depression,Sertraline,250,21,Insomnia,6.1,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0271,75,Female,Hypertension,Losartan,500,10,Back pain,7.2,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0272,69,Male,Infection,Ciprofloxacin,100,8,Dizziness,9.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0273,29,Female,Depression,Bupropion,500,24,Anxiety,5.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0274,79,Male,Depression,Escitalopram,250,52,Sweating,4.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0275,56,Male,Hypertension,Losartan,500,51,Headache,7.2,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0276,19,Female,Diabetes,Insulin Glargine,100,31,Weight gain,7.1,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0277,20,Female,Pain Relief,Paracetamol,500,19,Rash,7.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0278,66,Female,Diabetes,Glipizide,250,10,Skin rash,7.4,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0279,54,Female,Infection,Azithromycin,100,51,Headache,6.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0280,66,Female,Depression,Bupropion,850,18,Anxiety,9.2,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0281,73,Male,Hypertension,Losartan,500,15,Cough,4.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0282,34,Female,Hypertension,Losartan,250,43,Headache,5.8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0283,76,Male,Pain Relief,Tramadol,850,13,Nausea,6.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0284,66,Male,Diabetes,Metformin,50,30,Stomach upset,4.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0285,19,Female,Pain Relief,Ibuprofen,50,20,Heartburn,6.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0286,19,Male,Depression,Escitalopram,50,9,Sweating,9.5,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0287,45,Male,Pain Relief,Ibuprofen,50,56,Stomach pain,7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0288,71,Male,Hypertension,Losartan,250,14,Back pain,7.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0289,40,Male,Hypertension,Losartan,850,54,Headache,5.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0290,54,Female,Infection,Amoxicillin,100,7,Allergy,6.1,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0291,49,Male,Infection,Amoxicillin,250,17,Allergy,6.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0292,50,Female,Depression,Bupropion,500,47,Headache,6.5,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0293,18,Female,Diabetes,Metformin,100,53,Stomach upset,8.9,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0294,36,Male,Pain Relief,Tramadol,50,34,Nausea,7.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0295,79,Female,Depression,Escitalopram,100,58,Sleep issues,5.3,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0296,19,Female,Infection,Amoxicillin,850,49,Rash,7.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0297,70,Female,Pain Relief,Paracetamol,500,10,Liver issues,7.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0298,61,Male,Infection,Azithromycin,250,21,Headache,8.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0299,43,Female,Pain Relief,Ibuprofen,100,49,Stomach pain,9.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0300,49,Female,Diabetes,Insulin Glargine,250,55,Injection site pain,5.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0301,23,Female,Depression,Bupropion,100,57,Headache,5.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0302,49,Male,Pain Relief,Paracetamol,50,23,Fatigue,5.1,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0303,72,Female,Hypertension,Amlodipine,100,46,Dizziness,6.6,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0304,21,Male,Hypertension,Amlodipine,500,39,Dizziness,7.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0305,72,Male,Pain Relief,Paracetamol,50,50,Liver issues,8.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0306,28,Male,Pain Relief,Ibuprofen,50,30,Heartburn,6.9,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0307,73,Male,Pain Relief,Tramadol,850,55,Dizziness,6.5,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0308,76,Male,Hypertension,Amlodipine,850,9,Dizziness,7.2,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0309,34,Male,Hypertension,Losartan,50,33,Back pain,5.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0310,55,Female,Pain Relief,Ibuprofen,100,41,Stomach pain,10,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0311,41,Male,Infection,Amoxicillin,850,24,Allergy,4.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0312,22,Female,Infection,Ciprofloxacin,250,53,Nausea,7.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0313,69,Female,Diabetes,Metformin,100,25,Stomach upset,10,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0314,51,Male,Depression,Escitalopram,100,14,Sweating,7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0315,23,Female,Infection,Amoxicillin,500,9,Diarrhea,6.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0316,39,Female,Hypertension,Metoprolol,100,40,Dizziness,6.5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0317,28,Female,Infection,Azithromycin,50,10,Nausea,6.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0318,65,Female,Diabetes,Glipizide,100,30,Low blood sugar,9.1,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0319,33,Male,Diabetes,Metformin,100,8,Diarrhea,3.7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0320,50,Female,Depression,Bupropion,50,43,Anxiety,9.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0321,26,Male,Infection,Ciprofloxacin,50,43,Nausea,4.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0322,77,Female,Hypertension,Losartan,250,54,Cough,6.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0323,76,Female,Hypertension,Metoprolol,250,39,Slow heartbeat,6.4,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0324,23,Male,Pain Relief,Tramadol,50,5,Nausea,7.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0325,33,Female,Hypertension,Amlodipine,250,28,Dizziness,4.6,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0326,46,Female,Depression,Bupropion,250,40,Headache,7.7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0327,20,Female,Depression,Sertraline,100,10,Insomnia,10,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0328,37,Male,Hypertension,Metoprolol,500,45,Dizziness,5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0329,77,Female,Hypertension,Losartan,500,58,Back pain,7.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0330,76,Male,Pain Relief,Ibuprofen,100,50,Stomach pain,6,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0331,53,Female,Hypertension,Metoprolol,500,48,Tiredness,7.6,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0332,36,Male,Pain Relief,Paracetamol,250,35,Rash,7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0333,43,Male,Pain Relief,Ibuprofen,50,24,Nausea,6,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0334,20,Female,Hypertension,Amlodipine,850,28,Fatigue,7.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0335,36,Female,Diabetes,Insulin Glargine,100,29,Injection site pain,9.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0336,37,Male,Diabetes,Metformin,250,40,Stomach upset,6.7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0337,49,Male,Pain Relief,Tramadol,50,25,Nausea,8.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0338,24,Female,Hypertension,Amlodipine,50,34,Swelling,5.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0339,69,Male,Diabetes,Glipizide,850,28,Low blood sugar,5.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0340,58,Female,Hypertension,Losartan,100,48,Cough,7.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0341,50,Female,Hypertension,Losartan,100,46,Headache,9.2,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0342,57,Female,Hypertension,Amlodipine,100,34,Fatigue,7.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0343,56,Female,Infection,Ciprofloxacin,500,26,Dizziness,6.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0344,35,Male,Hypertension,Losartan,250,32,Headache,7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0345,57,Female,Infection,Amoxicillin,100,11,Rash,5.1,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0346,18,Male,Pain Relief,Paracetamol,250,39,Fatigue,7.9,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0347,28,Female,Diabetes,Glipizide,50,59,Skin rash,8.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0348,45,Male,Diabetes,Insulin Glargine,250,32,Injection site pain,6.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0349,74,Female,Diabetes,Metformin,250,18,Nausea,6.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0350,42,Male,Diabetes,Insulin Glargine,850,14,Injection site pain,7.4,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0351,67,Male,Diabetes,Insulin Glargine,500,20,Low sugar,6.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0352,40,Female,Diabetes,Glipizide,850,20,Skin rash,6.9,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0353,48,Female,Diabetes,Glipizide,500,58,Skin rash,10,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0354,47,Female,Pain Relief,Tramadol,850,35,Dizziness,6.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0355,59,Female,Hypertension,Metoprolol,500,46,Slow heartbeat,6.5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0356,52,Male,Depression,Bupropion,100,29,Headache,6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0357,24,Female,Infection,Amoxicillin,850,17,Allergy,8.1,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0358,77,Male,Depression,Escitalopram,250,10,Sweating,6.7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0359,33,Male,Depression,Sertraline,50,48,Insomnia,6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0360,43,Female,Hypertension,Metoprolol,250,13,Dizziness,9,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0361,65,Male,Hypertension,Losartan,850,49,Headache,9.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0362,74,Male,Hypertension,Losartan,500,40,Headache,6.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0363,69,Male,Diabetes,Metformin,50,47,Nausea,4.2,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0364,77,Male,Pain Relief,Paracetamol,100,24,Rash,8.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0365,66,Female,Diabetes,Metformin,50,22,Diarrhea,6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0366,19,Female,Pain Relief,Ibuprofen,100,47,Stomach pain,8.2,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0367,18,Female,Pain Relief,Tramadol,850,25,Nausea,4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0368,65,Female,Depression,Escitalopram,850,8,Sleep issues,8.3,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0369,79,Male,Depression,Sertraline,500,54,Drowsiness,5.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0370,29,Male,Pain Relief,Tramadol,100,37,Nausea,8.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0371,22,Female,Pain Relief,Ibuprofen,50,31,Stomach pain,7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0372,54,Female,Diabetes,Glipizide,100,11,Low blood sugar,5.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0373,49,Female,Diabetes,Insulin Glargine,250,10,Weight gain,6.4,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0374,76,Male,Depression,Sertraline,250,19,Dry mouth,8,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0375,72,Female,Hypertension,Metoprolol,250,22,Tiredness,7.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0376,26,Female,Pain Relief,Ibuprofen,100,36,Heartburn,7.9,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0377,58,Female,Diabetes,Insulin Glargine,250,15,Weight gain,10,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0378,52,Male,Depression,Sertraline,250,24,Drowsiness,4.7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0379,36,Male,Diabetes,Glipizide,50,28,Skin rash,9.4,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0380,65,Male,Pain Relief,Tramadol,100,19,Nausea,7.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0381,33,Male,Pain Relief,Paracetamol,100,52,Rash,5.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0382,20,Male,Infection,Azithromycin,100,11,Abdominal pain,5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0383,37,Male,Hypertension,Amlodipine,500,25,Fatigue,6.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0384,41,Male,Infection,Ciprofloxacin,100,46,Joint pain,8.4,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0385,71,Male,Depression,Sertraline,850,30,Drowsiness,6.8,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0386,73,Female,Diabetes,Insulin Glargine,500,48,Injection site pain,9.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0387,50,Female,Depression,Sertraline,250,18,Insomnia,4.8,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0388,41,Male,Pain Relief,Paracetamol,500,41,Liver issues,7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0389,69,Male,Infection,Ciprofloxacin,250,25,Nausea,5.1,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0390,28,Female,Infection,Azithromycin,250,22,Abdominal pain,7.5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0391,66,Male,Infection,Amoxicillin,250,9,Allergy,8.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0392,25,Male,Depression,Bupropion,50,7,Anxiety,6.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0393,53,Male,Pain Relief,Ibuprofen,850,27,Heartburn,3.1,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0394,55,Female,Diabetes,Glipizide,850,30,Nausea,7.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0395,57,Female,Diabetes,Insulin Glargine,250,41,Low sugar,7.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0396,37,Female,Depression,Bupropion,500,28,Headache,7.6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0397,79,Female,Infection,Azithromycin,100,53,Nausea,8.9,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0398,52,Female,Hypertension,Amlodipine,850,23,Dizziness,5.4,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0399,65,Male,Depression,Sertraline,100,55,Drowsiness,8,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0400,79,Female,Depression,Bupropion,250,29,Anxiety,8.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0401,42,Male,Pain Relief,Tramadol,850,25,Constipation,4.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0402,52,Male,Diabetes,Metformin,50,16,Stomach upset,7.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0403,42,Female,Depression,Bupropion,50,45,Headache,6.2,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0404,46,Female,Depression,Escitalopram,500,37,Nausea,6.9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0405,35,Male,Infection,Ciprofloxacin,50,54,Joint pain,7.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0406,63,Male,Infection,Azithromycin,250,57,Headache,6.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0407,35,Male,Hypertension,Metoprolol,250,8,Tiredness,6,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0408,19,Female,Pain Relief,Ibuprofen,100,46,Stomach pain,7.1,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0409,71,Female,Hypertension,Losartan,250,11,Cough,5.4,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0410,52,Female,Infection,Ciprofloxacin,50,26,Joint pain,5.4,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0411,33,Female,Diabetes,Glipizide,250,59,Nausea,8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0412,78,Female,Infection,Amoxicillin,50,37,Rash,5.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0413,58,Male,Pain Relief,Tramadol,50,21,Nausea,8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0414,53,Female,Infection,Amoxicillin,500,28,Allergy,7.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0415,50,Male,Pain Relief,Tramadol,850,38,Nausea,4.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0416,21,Male,Pain Relief,Tramadol,100,32,Constipation,6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0417,50,Male,Pain Relief,Paracetamol,100,47,Liver issues,8.8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0418,31,Female,Pain Relief,Paracetamol,100,45,Fatigue,5.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0419,38,Female,Pain Relief,Paracetamol,50,43,Liver issues,6.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0420,65,Female,Diabetes,Metformin,850,26,Nausea,7.7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0421,37,Male,Hypertension,Losartan,850,53,Back pain,8.2,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0422,73,Male,Depression,Escitalopram,500,21,Sleep issues,6.6,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0423,25,Male,Hypertension,Metoprolol,50,38,Tiredness,6.1,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0424,24,Male,Pain Relief,Paracetamol,500,10,Fatigue,9.1,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0425,20,Male,Diabetes,Metformin,50,50,Nausea,9.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0426,34,Male,Infection,Ciprofloxacin,100,10,Dizziness,8.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0427,50,Female,Diabetes,Glipizide,250,38,Nausea,7.1,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0428,65,Female,Pain Relief,Paracetamol,50,5,Rash,5.8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0429,29,Female,Diabetes,Insulin Glargine,50,14,Injection site pain,5.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0430,76,Female,Diabetes,Insulin Glargine,850,25,Weight gain,7.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0431,68,Male,Pain Relief,Ibuprofen,500,9,Stomach pain,7.6,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0432,39,Male,Diabetes,Metformin,850,6,Diarrhea,9.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0433,72,Female,Depression,Escitalopram,250,26,Nausea,8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0434,39,Male,Depression,Escitalopram,100,52,Sweating,4.7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0435,63,Female,Diabetes,Glipizide,850,6,Low blood sugar,8.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0436,47,Female,Infection,Ciprofloxacin,250,14,Dizziness,5.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0437,55,Female,Pain Relief,Paracetamol,100,38,Rash,6.4,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0438,55,Male,Depression,Escitalopram,250,20,Sweating,7.4,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0439,62,Female,Infection,Azithromycin,500,52,Abdominal pain,10,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0440,68,Female,Diabetes,Glipizide,100,55,Skin rash,10,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0441,71,Female,Infection,Amoxicillin,500,43,Diarrhea,7.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0442,25,Male,Hypertension,Losartan,250,26,Headache,6.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0443,44,Male,Depression,Escitalopram,100,16,Sweating,7.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0444,44,Female,Diabetes,Insulin Glargine,250,28,Weight gain,8.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0445,51,Male,Pain Relief,Tramadol,850,51,Nausea,6.5,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0446,38,Male,Diabetes,Insulin Glargine,250,44,Low sugar,9.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0447,47,Male,Pain Relief,Tramadol,50,42,Constipation,7.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0448,50,Male,Diabetes,Insulin Glargine,50,14,Weight gain,7.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0449,45,Male,Infection,Amoxicillin,50,39,Allergy,8,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0450,64,Male,Infection,Amoxicillin,250,55,Rash,7.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0451,50,Male,Infection,Ciprofloxacin,250,53,Dizziness,8.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0452,22,Male,Hypertension,Losartan,50,36,Headache,6.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0453,77,Male,Pain Relief,Paracetamol,50,11,Fatigue,6.2,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0454,78,Male,Infection,Azithromycin,250,25,Headache,5.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0455,65,Female,Hypertension,Amlodipine,500,24,Swelling,7.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0456,36,Female,Pain Relief,Ibuprofen,850,30,Nausea,8.2,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0457,21,Male,Diabetes,Insulin Glargine,850,8,Weight gain,7.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0458,52,Female,Hypertension,Amlodipine,250,50,Fatigue,9.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0459,66,Female,Depression,Escitalopram,850,56,Sleep issues,7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0460,34,Male,Hypertension,Losartan,500,26,Cough,8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0461,61,Male,Hypertension,Amlodipine,50,19,Swelling,5.4,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0462,45,Male,Pain Relief,Tramadol,50,44,Dizziness,6.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0463,47,Female,Diabetes,Glipizide,100,25,Nausea,8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0464,46,Female,Depression,Escitalopram,850,19,Nausea,8.3,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0465,63,Male,Infection,Amoxicillin,500,26,Allergy,6.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0466,70,Male,Infection,Amoxicillin,500,56,Rash,6.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0467,23,Male,Hypertension,Metoprolol,100,32,Dizziness,4.7,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0468,52,Female,Pain Relief,Ibuprofen,250,18,Nausea,6.5,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0469,77,Female,Pain Relief,Paracetamol,100,31,Rash,8.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0470,58,Female,Infection,Ciprofloxacin,100,45,Nausea,7.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0471,54,Female,Depression,Escitalopram,100,44,Sweating,7.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0472,41,Male,Diabetes,Metformin,100,32,Stomach upset,7.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0473,46,Male,Depression,Bupropion,500,30,Anxiety,7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0474,66,Male,Diabetes,Metformin,500,53,Stomach upset,6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0475,63,Male,Infection,Ciprofloxacin,250,6,Nausea,8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0476,70,Female,Diabetes,Metformin,850,29,Diarrhea,7.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0477,48,Female,Pain Relief,Paracetamol,250,7,Rash,7.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0478,52,Male,Hypertension,Metoprolol,50,12,Tiredness,6.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0479,77,Male,Hypertension,Losartan,50,48,Cough,3.8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0480,50,Female,Infection,Azithromycin,100,37,Nausea,8.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0481,69,Male,Pain Relief,Tramadol,100,46,Nausea,6.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0482,78,Female,Depression,Escitalopram,50,56,Sleep issues,5.7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0483,38,Male,Pain Relief,Ibuprofen,50,39,Heartburn,8,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0484,49,Male,Hypertension,Metoprolol,850,10,Tiredness,6.4,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0485,40,Male,Hypertension,Losartan,100,43,Back pain,8.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0486,50,Male,Pain Relief,Tramadol,850,56,Constipation,7.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0487,20,Male,Pain Relief,Ibuprofen,100,27,Stomach pain,8,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0488,35,Male,Hypertension,Metoprolol,250,29,Tiredness,5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0489,42,Male,Depression,Escitalopram,850,54,Nausea,8.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0490,59,Female,Infection,Amoxicillin,850,47,Allergy,7.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0491,48,Female,Infection,Ciprofloxacin,100,23,Dizziness,6.4,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0492,71,Female,Pain Relief,Ibuprofen,250,9,Stomach pain,7.2,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0493,75,Female,Infection,Ciprofloxacin,250,55,Dizziness,4.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0494,20,Female,Hypertension,Amlodipine,850,15,Fatigue,7.6,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0495,57,Male,Hypertension,Amlodipine,50,16,Swelling,5.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0496,63,Male,Pain Relief,Ibuprofen,500,14,Stomach pain,5,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0497,41,Female,Pain Relief,Ibuprofen,50,12,Nausea,4.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0498,67,Male,Pain Relief,Tramadol,250,28,Dizziness,8.7,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0499,49,Female,Depression,Bupropion,500,32,Dry mouth,6.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0500,64,Female,Infection,Amoxicillin,850,45,Rash,9.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0501,39,Male,Pain Relief,Tramadol,850,40,Nausea,6.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0502,40,Male,Diabetes,Insulin Glargine,50,41,Low sugar,4.4,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0503,19,Male,Diabetes,Insulin Glargine,50,25,Weight gain,5.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0504,44,Female,Hypertension,Losartan,500,12,Back pain,8.9,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0505,59,Male,Infection,Ciprofloxacin,850,59,Joint pain,6.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0506,19,Female,Pain Relief,Paracetamol,850,13,Rash,6.2,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0507,43,Female,Diabetes,Glipizide,100,51,Nausea,7.2,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0508,34,Female,Infection,Amoxicillin,250,19,Rash,7.8,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0509,57,Male,Hypertension,Losartan,500,52,Headache,8.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0510,50,Male,Depression,Bupropion,100,50,Dry mouth,9.2,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0511,26,Female,Infection,Azithromycin,50,44,Abdominal pain,6.5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0512,60,Male,Infection,Azithromycin,250,22,Abdominal pain,5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0513,71,Male,Depression,Bupropion,50,46,Dry mouth,6.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0514,65,Male,Infection,Azithromycin,850,24,Nausea,7.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0515,56,Female,Hypertension,Losartan,850,10,Back pain,5.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0516,46,Female,Hypertension,Losartan,850,16,Cough,5.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0517,59,Male,Depression,Escitalopram,500,6,Sleep issues,7.5,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0518,72,Female,Pain Relief,Tramadol,50,11,Dizziness,6.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0519,43,Male,Diabetes,Insulin Glargine,850,20,Low sugar,7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0520,52,Male,Pain Relief,Paracetamol,100,7,Fatigue,5.9,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0521,67,Male,Infection,Ciprofloxacin,500,49,Nausea,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0522,42,Male,Diabetes,Insulin Glargine,500,7,Injection site pain,5.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0523,41,Female,Depression,Bupropion,500,31,Anxiety,8.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0524,30,Female,Depression,Sertraline,850,54,Dry mouth,8.6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0525,77,Female,Diabetes,Glipizide,500,47,Nausea,4.2,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0526,75,Male,Hypertension,Losartan,100,44,Headache,5.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0527,24,Male,Diabetes,Metformin,100,42,Diarrhea,4.8,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0528,74,Male,Infection,Amoxicillin,850,37,Rash,6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0529,53,Female,Hypertension,Losartan,50,32,Back pain,6.9,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0530,62,Male,Depression,Escitalopram,50,5,Sleep issues,4.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0531,37,Female,Diabetes,Glipizide,500,59,Skin rash,5.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0532,18,Female,Pain Relief,Ibuprofen,500,12,Heartburn,5.5,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0533,25,Female,Pain Relief,Ibuprofen,850,41,Heartburn,7.3,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0534,63,Female,Infection,Amoxicillin,850,36,Rash,7.1,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0535,33,Female,Pain Relief,Tramadol,100,52,Nausea,5.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0536,31,Female,Diabetes,Metformin,500,47,Stomach upset,7.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0537,29,Male,Diabetes,Insulin Glargine,250,41,Injection site pain,6.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0538,68,Male,Pain Relief,Paracetamol,850,8,Fatigue,6.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0539,40,Female,Diabetes,Insulin Glargine,250,34,Low sugar,9.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0540,32,Female,Infection,Amoxicillin,250,10,Diarrhea,9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0541,45,Male,Hypertension,Losartan,500,50,Headache,5.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0542,51,Female,Infection,Ciprofloxacin,100,58,Joint pain,8.2,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0543,19,Female,Infection,Amoxicillin,250,23,Diarrhea,8.2,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0544,49,Male,Diabetes,Metformin,50,36,Stomach upset,5.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0545,40,Female,Hypertension,Metoprolol,100,13,Dizziness,8.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0546,39,Female,Diabetes,Metformin,850,16,Stomach upset,9.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0547,68,Female,Depression,Sertraline,850,15,Dry mouth,5.3,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0548,42,Male,Diabetes,Metformin,500,50,Nausea,5.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0549,75,Male,Diabetes,Insulin Glargine,250,59,Injection site pain,8.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0550,79,Male,Diabetes,Metformin,250,20,Diarrhea,7.4,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0551,78,Female,Hypertension,Amlodipine,50,5,Dizziness,7.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0552,39,Female,Diabetes,Insulin Glargine,850,49,Low sugar,7.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0553,75,Male,Hypertension,Metoprolol,850,59,Tiredness,7.6,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0554,75,Female,Pain Relief,Paracetamol,50,57,Rash,5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0555,39,Female,Depression,Bupropion,850,25,Headache,8.6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0556,66,Female,Hypertension,Amlodipine,100,34,Fatigue,8.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0557,69,Female,Pain Relief,Tramadol,100,17,Nausea,6.7,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0558,59,Female,Hypertension,Losartan,850,38,Cough,6.9,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0559,23,Male,Hypertension,Amlodipine,50,8,Dizziness,4.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0560,32,Female,Depression,Bupropion,50,32,Headache,7.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0561,71,Male,Infection,Ciprofloxacin,850,42,Nausea,7.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0562,60,Female,Infection,Amoxicillin,100,35,Rash,6.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0563,77,Male,Hypertension,Losartan,500,59,Headache,8.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0564,54,Female,Diabetes,Insulin Glargine,850,31,Low sugar,6.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0565,50,Male,Pain Relief,Paracetamol,50,9,Liver issues,7.8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0566,25,Female,Diabetes,Glipizide,250,29,Nausea,5.5,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0567,70,Male,Diabetes,Metformin,250,7,Stomach upset,7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0568,77,Female,Hypertension,Metoprolol,850,37,Tiredness,6.7,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0569,61,Male,Hypertension,Losartan,250,8,Headache,7.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0570,61,Female,Hypertension,Metoprolol,850,29,Tiredness,6.4,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0571,22,Male,Hypertension,Amlodipine,250,24,Swelling,6.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0572,56,Male,Infection,Ciprofloxacin,100,38,Joint pain,8.2,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0573,21,Female,Hypertension,Metoprolol,850,30,Tiredness,6.3,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0574,23,Female,Infection,Azithromycin,250,9,Nausea,4.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0575,62,Male,Infection,Ciprofloxacin,850,39,Dizziness,9.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0576,49,Female,Hypertension,Losartan,850,32,Back pain,9.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0577,69,Male,Depression,Bupropion,100,33,Dry mouth,5.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0578,47,Male,Pain Relief,Paracetamol,250,13,Liver issues,8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0579,64,Male,Diabetes,Metformin,250,56,Stomach upset,6.2,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0580,52,Female,Infection,Amoxicillin,500,42,Allergy,7.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0581,72,Male,Pain Relief,Tramadol,50,54,Constipation,7.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0582,57,Male,Depression,Sertraline,850,10,Drowsiness,6.6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0583,69,Female,Diabetes,Insulin Glargine,250,23,Low sugar,5.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0584,33,Female,Diabetes,Insulin Glargine,100,48,Low sugar,6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0585,30,Female,Infection,Ciprofloxacin,500,15,Joint pain,5.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0586,67,Female,Hypertension,Metoprolol,50,6,Dizziness,5.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0587,77,Male,Depression,Escitalopram,250,51,Sleep issues,6.9,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0588,59,Male,Infection,Azithromycin,500,48,Nausea,5.9,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0589,47,Male,Depression,Bupropion,250,48,Dry mouth,8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0590,36,Male,Hypertension,Amlodipine,500,13,Fatigue,9.2,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0591,34,Female,Hypertension,Amlodipine,250,25,Swelling,6.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0592,73,Male,Infection,Azithromycin,250,28,Headache,7.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0593,36,Male,Hypertension,Losartan,250,38,Back pain,7.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0594,45,Female,Pain Relief,Ibuprofen,250,26,Stomach pain,7.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0595,75,Male,Diabetes,Metformin,250,7,Diarrhea,7.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0596,72,Male,Infection,Azithromycin,100,16,Headache,8.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0597,43,Male,Depression,Sertraline,100,32,Insomnia,7.7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0598,54,Male,Pain Relief,Tramadol,250,34,Nausea,5.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0599,43,Male,Infection,Azithromycin,250,30,Nausea,8.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0600,70,Male,Hypertension,Losartan,50,52,Back pain,8.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0601,79,Female,Hypertension,Amlodipine,50,25,Fatigue,5.9,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0602,40,Female,Hypertension,Metoprolol,50,32,Slow heartbeat,7.1,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0603,26,Male,Hypertension,Losartan,100,30,Cough,8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0604,29,Male,Depression,Escitalopram,500,37,Sleep issues,6.7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0605,70,Female,Pain Relief,Paracetamol,850,25,Fatigue,8.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0606,18,Male,Diabetes,Insulin Glargine,500,39,Injection site pain,10,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0607,75,Male,Depression,Bupropion,500,56,Headache,5.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0608,75,Male,Depression,Sertraline,500,38,Dry mouth,4.9,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0609,18,Female,Diabetes,Insulin Glargine,50,45,Injection site pain,7.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0610,64,Male,Diabetes,Metformin,50,55,Stomach upset,8.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0611,51,Female,Hypertension,Amlodipine,500,51,Fatigue,6.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0612,49,Male,Depression,Sertraline,850,22,Drowsiness,9.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0613,79,Female,Infection,Amoxicillin,500,15,Rash,5,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0614,71,Female,Diabetes,Metformin,50,27,Nausea,8,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0615,65,Male,Diabetes,Metformin,100,52,Nausea,6.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0616,42,Female,Pain Relief,Paracetamol,50,26,Rash,9.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0617,57,Male,Infection,Azithromycin,850,21,Nausea,10,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0618,62,Female,Infection,Amoxicillin,500,9,Allergy,5.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0619,70,Male,Diabetes,Glipizide,250,48,Nausea,6.2,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0620,18,Male,Hypertension,Losartan,500,15,Cough,8.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0621,33,Female,Pain Relief,Tramadol,50,34,Dizziness,6.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0622,78,Male,Infection,Amoxicillin,850,19,Diarrhea,6.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0623,56,Male,Diabetes,Insulin Glargine,850,31,Injection site pain,7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0624,22,Female,Infection,Azithromycin,100,39,Nausea,4.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0625,39,Male,Pain Relief,Ibuprofen,850,37,Stomach pain,7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0626,46,Male,Pain Relief,Paracetamol,500,24,Liver issues,6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0627,72,Female,Depression,Bupropion,50,20,Headache,6.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0628,20,Female,Diabetes,Insulin Glargine,50,38,Low sugar,9.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0629,29,Male,Pain Relief,Paracetamol,50,6,Rash,5.1,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0630,43,Male,Depression,Escitalopram,850,39,Nausea,8.2,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0631,33,Female,Depression,Sertraline,850,44,Drowsiness,6.6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0632,68,Female,Infection,Amoxicillin,100,32,Allergy,6.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0633,54,Male,Infection,Azithromycin,100,51,Nausea,8.2,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0634,39,Female,Depression,Sertraline,850,43,Dry mouth,7.5,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0635,74,Male,Infection,Ciprofloxacin,250,10,Nausea,7.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0636,46,Male,Pain Relief,Paracetamol,50,13,Fatigue,8.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0637,31,Male,Hypertension,Metoprolol,250,24,Tiredness,6.5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0638,45,Male,Pain Relief,Tramadol,50,5,Constipation,6.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0639,22,Male,Depression,Bupropion,250,12,Anxiety,5.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0640,64,Female,Depression,Escitalopram,50,59,Sleep issues,5.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0641,66,Female,Pain Relief,Tramadol,250,27,Dizziness,10,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0642,47,Female,Infection,Azithromycin,250,7,Headache,8.9,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0643,63,Female,Infection,Amoxicillin,250,8,Diarrhea,5,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0644,79,Male,Depression,Sertraline,850,29,Insomnia,5,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0645,69,Male,Diabetes,Glipizide,50,51,Skin rash,7.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0646,22,Male,Infection,Amoxicillin,100,42,Rash,7.8,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0647,29,Male,Pain Relief,Tramadol,500,19,Dizziness,7.8,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0648,33,Female,Infection,Azithromycin,50,25,Abdominal pain,6.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0649,43,Male,Pain Relief,Ibuprofen,850,39,Stomach pain,6.8,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0650,43,Male,Depression,Bupropion,500,57,Dry mouth,7.5,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0651,65,Female,Infection,Ciprofloxacin,100,57,Nausea,7.1,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0652,38,Female,Pain Relief,Tramadol,50,50,Dizziness,3.7,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0653,56,Female,Depression,Sertraline,50,56,Insomnia,6.7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0654,53,Female,Diabetes,Glipizide,850,18,Nausea,5.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0655,50,Male,Pain Relief,Tramadol,500,40,Constipation,7.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0656,79,Male,Diabetes,Insulin Glargine,50,16,Low sugar,10,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0657,47,Female,Diabetes,Glipizide,100,21,Low blood sugar,7.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0658,54,Male,Hypertension,Metoprolol,850,43,Slow heartbeat,6.5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0659,40,Male,Infection,Azithromycin,250,13,Headache,8.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0660,75,Male,Pain Relief,Paracetamol,100,39,Liver issues,7.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0661,27,Female,Diabetes,Metformin,500,17,Diarrhea,7.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0662,71,Male,Hypertension,Metoprolol,100,19,Slow heartbeat,7.9,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0663,22,Female,Depression,Sertraline,50,22,Drowsiness,10,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0664,53,Male,Pain Relief,Paracetamol,250,55,Rash,5.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0665,51,Male,Diabetes,Glipizide,500,37,Low blood sugar,7.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0666,69,Male,Infection,Ciprofloxacin,500,10,Dizziness,5.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0667,48,Female,Hypertension,Amlodipine,100,31,Swelling,7.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0668,27,Male,Diabetes,Glipizide,850,27,Low blood sugar,5.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0669,75,Female,Infection,Azithromycin,500,31,Nausea,6.4,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0670,36,Female,Diabetes,Insulin Glargine,850,38,Weight gain,6.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0671,75,Female,Pain Relief,Paracetamol,850,50,Rash,8.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0672,49,Male,Pain Relief,Tramadol,850,42,Dizziness,8.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0673,18,Male,Pain Relief,Ibuprofen,250,18,Nausea,5.1,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0674,73,Male,Hypertension,Losartan,500,40,Back pain,7.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0675,22,Male,Pain Relief,Paracetamol,250,57,Fatigue,5.9,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0676,62,Female,Infection,Azithromycin,250,12,Headache,5.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0677,21,Female,Diabetes,Insulin Glargine,850,39,Injection site pain,6.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0678,33,Female,Depression,Sertraline,500,23,Insomnia,6.5,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0679,41,Male,Infection,Amoxicillin,50,34,Rash,10,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0680,33,Female,Infection,Ciprofloxacin,500,18,Dizziness,7.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0681,72,Male,Pain Relief,Ibuprofen,850,24,Heartburn,4.9,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0682,19,Female,Hypertension,Amlodipine,500,53,Swelling,6.2,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0683,66,Male,Diabetes,Metformin,50,29,Nausea,8.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0684,45,Male,Hypertension,Amlodipine,100,44,Dizziness,10,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0685,49,Female,Diabetes,Insulin Glargine,500,28,Low sugar,4.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0686,44,Female,Diabetes,Insulin Glargine,500,18,Low sugar,4.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0687,37,Female,Hypertension,Losartan,100,30,Headache,9.8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0688,41,Female,Infection,Ciprofloxacin,250,42,Dizziness,7.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0689,29,Male,Diabetes,Glipizide,50,27,Low blood sugar,5.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0690,67,Female,Hypertension,Metoprolol,850,26,Slow heartbeat,7.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0691,52,Female,Diabetes,Glipizide,250,52,Low blood sugar,3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0692,77,Female,Depression,Bupropion,850,23,Anxiety,7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0693,50,Male,Infection,Azithromycin,100,50,Headache,7.5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0694,50,Male,Pain Relief,Paracetamol,50,55,Liver issues,8.4,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0695,78,Female,Diabetes,Insulin Glargine,50,7,Injection site pain,5.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0696,68,Male,Depression,Escitalopram,850,46,Nausea,7.1,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0697,60,Female,Pain Relief,Ibuprofen,250,23,Stomach pain,5.6,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0698,54,Male,Pain Relief,Ibuprofen,100,13,Nausea,7.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0699,29,Male,Diabetes,Glipizide,850,32,Skin rash,5.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0700,20,Male,Hypertension,Losartan,100,24,Headache,6.4,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0701,18,Male,Diabetes,Metformin,850,49,Diarrhea,5.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0702,50,Female,Depression,Escitalopram,250,11,Nausea,8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0703,57,Female,Pain Relief,Ibuprofen,850,18,Heartburn,8.3,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0704,27,Female,Diabetes,Glipizide,250,13,Nausea,6.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0705,60,Male,Hypertension,Amlodipine,250,59,Dizziness,7.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0706,61,Female,Diabetes,Insulin Glargine,250,23,Weight gain,4.8,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0707,46,Female,Infection,Azithromycin,250,51,Abdominal pain,6.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0708,30,Female,Hypertension,Amlodipine,250,56,Dizziness,6.9,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0709,29,Male,Depression,Bupropion,250,18,Dry mouth,10,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0710,48,Male,Pain Relief,Ibuprofen,50,42,Nausea,5.3,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0711,63,Male,Diabetes,Metformin,850,57,Stomach upset,9.2,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0712,19,Female,Hypertension,Amlodipine,500,40,Swelling,8.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0713,78,Female,Infection,Amoxicillin,100,44,Allergy,7.4,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0714,68,Female,Hypertension,Losartan,500,21,Headache,9.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0715,67,Male,Infection,Ciprofloxacin,50,34,Nausea,7.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0716,52,Male,Depression,Escitalopram,50,13,Sleep issues,7.6,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0717,40,Female,Pain Relief,Ibuprofen,50,37,Stomach pain,6.9,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0718,34,Male,Depression,Escitalopram,500,56,Sleep issues,8.8,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0719,43,Male,Diabetes,Metformin,100,29,Nausea,8.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0720,25,Male,Hypertension,Metoprolol,500,18,Dizziness,6.1,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0721,46,Male,Infection,Ciprofloxacin,500,15,Nausea,5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0722,43,Female,Infection,Ciprofloxacin,250,57,Nausea,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0723,27,Male,Hypertension,Amlodipine,100,39,Dizziness,5.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0724,43,Male,Hypertension,Metoprolol,250,45,Slow heartbeat,6.9,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0725,79,Male,Diabetes,Insulin Glargine,50,18,Injection site pain,8.9,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0726,51,Male,Depression,Sertraline,100,34,Insomnia,6.3,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0727,68,Female,Infection,Amoxicillin,500,45,Diarrhea,6.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0728,58,Female,Diabetes,Insulin Glargine,100,8,Injection site pain,7.1,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0729,24,Male,Depression,Escitalopram,850,8,Sleep issues,8.3,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0730,21,Male,Diabetes,Glipizide,500,32,Nausea,3.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0731,75,Male,Infection,Amoxicillin,50,12,Allergy,6.1,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0732,70,Male,Hypertension,Amlodipine,850,6,Swelling,7.3,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0733,67,Male,Hypertension,Losartan,850,45,Back pain,8.8,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0734,62,Male,Depression,Escitalopram,500,50,Nausea,6.3,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0735,28,Female,Pain Relief,Ibuprofen,100,26,Stomach pain,4.2,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0736,46,Male,Depression,Bupropion,100,45,Anxiety,7.9,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0737,73,Female,Pain Relief,Paracetamol,50,59,Rash,6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0738,53,Female,Diabetes,Glipizide,850,20,Low blood sugar,5.2,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0739,42,Male,Diabetes,Metformin,250,33,Diarrhea,6.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0740,38,Female,Infection,Ciprofloxacin,500,53,Joint pain,6.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0741,78,Female,Pain Relief,Tramadol,250,52,Nausea,6.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0742,74,Female,Infection,Amoxicillin,500,34,Allergy,3.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0743,53,Female,Hypertension,Metoprolol,50,16,Slow heartbeat,8.3,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0744,27,Female,Pain Relief,Ibuprofen,100,39,Stomach pain,8.9,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0745,54,Female,Depression,Bupropion,50,15,Anxiety,8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0746,26,Male,Hypertension,Losartan,500,50,Headache,5.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0747,41,Female,Hypertension,Losartan,100,54,Headache,6.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0748,52,Female,Depression,Bupropion,250,25,Headache,7,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0749,66,Female,Hypertension,Metoprolol,850,25,Dizziness,7.9,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0750,52,Male,Pain Relief,Paracetamol,50,9,Liver issues,8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0751,65,Female,Infection,Ciprofloxacin,850,52,Dizziness,5.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0752,53,Male,Hypertension,Losartan,500,24,Back pain,7.1,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0753,35,Female,Pain Relief,Paracetamol,500,41,Liver issues,7.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0754,66,Male,Diabetes,Insulin Glargine,250,7,Weight gain,9.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0755,56,Male,Pain Relief,Tramadol,850,48,Nausea,8.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0756,49,Female,Infection,Amoxicillin,500,37,Rash,8.2,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0757,41,Female,Pain Relief,Paracetamol,850,57,Fatigue,7.1,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0758,40,Male,Depression,Bupropion,500,13,Headache,9.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0759,79,Female,Infection,Azithromycin,500,13,Headache,7.6,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0760,49,Male,Diabetes,Metformin,250,8,Stomach upset,5.7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0761,54,Male,Depression,Bupropion,100,39,Headache,9.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0762,29,Male,Pain Relief,Paracetamol,250,21,Rash,8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0763,66,Male,Infection,Ciprofloxacin,850,38,Nausea,6.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0764,72,Male,Diabetes,Metformin,100,28,Diarrhea,6.3,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0765,30,Female,Depression,Bupropion,250,36,Headache,7.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0766,40,Male,Diabetes,Insulin Glargine,50,5,Low sugar,7.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0767,42,Male,Pain Relief,Ibuprofen,100,12,Heartburn,7.3,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0768,52,Female,Diabetes,Metformin,250,49,Nausea,7.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0769,58,Male,Hypertension,Metoprolol,250,27,Dizziness,9.5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0770,47,Female,Depression,Bupropion,500,51,Dry mouth,8.6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0771,34,Female,Diabetes,Glipizide,250,44,Skin rash,7.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0772,66,Female,Pain Relief,Tramadol,850,16,Constipation,8.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0773,79,Male,Pain Relief,Paracetamol,250,58,Rash,5.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0774,37,Male,Diabetes,Glipizide,850,16,Skin rash,7.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0775,65,Male,Pain Relief,Tramadol,850,50,Nausea,9.7,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0776,42,Female,Infection,Azithromycin,850,51,Headache,6.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0777,39,Male,Infection,Ciprofloxacin,500,19,Dizziness,5.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0778,30,Female,Infection,Ciprofloxacin,50,45,Dizziness,6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0779,76,Male,Hypertension,Amlodipine,50,23,Dizziness,5.4,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0780,36,Female,Diabetes,Metformin,100,30,Diarrhea,5.8,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0781,66,Male,Hypertension,Amlodipine,250,56,Fatigue,6.4,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0782,53,Male,Pain Relief,Tramadol,50,33,Dizziness,4.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0783,29,Male,Hypertension,Amlodipine,100,26,Swelling,7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0784,78,Female,Pain Relief,Ibuprofen,500,44,Heartburn,8.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0785,58,Female,Pain Relief,Ibuprofen,850,25,Stomach pain,5.6,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0786,36,Male,Depression,Bupropion,500,55,Headache,9.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0787,29,Male,Infection,Ciprofloxacin,50,42,Joint pain,7.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0788,26,Female,Pain Relief,Ibuprofen,100,24,Nausea,8.5,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0789,24,Female,Depression,Bupropion,500,33,Dry mouth,6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0790,45,Female,Infection,Amoxicillin,250,55,Diarrhea,8.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0791,31,Male,Pain Relief,Ibuprofen,250,8,Heartburn,5.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0792,48,Female,Pain Relief,Ibuprofen,850,59,Heartburn,8.3,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0793,69,Male,Hypertension,Amlodipine,250,11,Swelling,7.3,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0794,36,Female,Hypertension,Metoprolol,50,32,Slow heartbeat,7.8,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0795,75,Male,Infection,Ciprofloxacin,50,32,Dizziness,5.2,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0796,64,Female,Pain Relief,Ibuprofen,250,8,Nausea,5.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0797,33,Female,Diabetes,Glipizide,250,26,Nausea,7.9,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0798,70,Female,Hypertension,Metoprolol,50,16,Slow heartbeat,5.6,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0799,22,Female,Infection,Azithromycin,50,49,Headache,7.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0800,52,Female,Pain Relief,Paracetamol,500,7,Liver issues,4.9,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0801,29,Male,Pain Relief,Ibuprofen,500,26,Nausea,8.3,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0802,42,Female,Diabetes,Insulin Glargine,500,48,Weight gain,5.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0803,69,Female,Infection,Azithromycin,850,6,Nausea,7.8,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0804,76,Female,Pain Relief,Tramadol,850,28,Dizziness,7.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0805,38,Male,Hypertension,Amlodipine,50,38,Dizziness,6,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0806,53,Female,Diabetes,Glipizide,100,31,Nausea,7.9,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0807,70,Male,Infection,Ciprofloxacin,500,59,Nausea,7.4,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0808,40,Female,Diabetes,Metformin,250,45,Nausea,6.2,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0809,33,Female,Hypertension,Amlodipine,250,5,Fatigue,5.5,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0810,74,Male,Infection,Amoxicillin,850,12,Allergy,4.1,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0811,56,Female,Diabetes,Glipizide,100,27,Nausea,7.5,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0812,62,Male,Depression,Escitalopram,100,42,Sweating,4.7,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0813,70,Male,Hypertension,Metoprolol,50,10,Dizziness,7.1,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0814,59,Female,Hypertension,Metoprolol,250,26,Slow heartbeat,6.6,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0815,75,Male,Hypertension,Amlodipine,850,29,Fatigue,8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0816,56,Female,Depression,Escitalopram,50,22,Nausea,6.5,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0817,31,Female,Depression,Escitalopram,100,21,Sweating,6.5,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0818,48,Male,Pain Relief,Tramadol,850,16,Dizziness,8.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0819,75,Male,Diabetes,Metformin,500,10,Diarrhea,7.5,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0820,22,Male,Pain Relief,Ibuprofen,100,30,Heartburn,7.5,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0821,52,Male,Diabetes,Glipizide,850,31,Low blood sugar,7.7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0822,40,Female,Depression,Sertraline,250,12,Drowsiness,4.7,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0823,46,Female,Depression,Bupropion,100,23,Dry mouth,8.1,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0824,60,Male,Pain Relief,Ibuprofen,500,46,Heartburn,7.9,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0825,28,Female,Infection,Ciprofloxacin,100,5,Nausea,5.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0826,35,Female,Pain Relief,Paracetamol,250,33,Fatigue,6.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0827,64,Female,Diabetes,Glipizide,250,49,Skin rash,6.9,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0828,29,Female,Pain Relief,Paracetamol,250,53,Fatigue,6.8,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0829,26,Male,Hypertension,Losartan,50,39,Back pain,7.5,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0830,27,Male,Diabetes,Metformin,100,44,Diarrhea,9.1,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0831,75,Female,Diabetes,Metformin,100,18,Nausea,8.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0832,61,Male,Infection,Azithromycin,50,39,Headache,5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0833,34,Male,Depression,Bupropion,250,52,Headache,7.9,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0834,78,Male,Diabetes,Insulin Glargine,500,49,Low sugar,9,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0835,55,Female,Depression,Sertraline,850,24,Insomnia,7.6,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0836,24,Female,Pain Relief,Tramadol,100,53,Nausea,8.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0837,63,Female,Hypertension,Amlodipine,50,17,Dizziness,10,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0838,30,Male,Infection,Amoxicillin,50,42,Allergy,8.5,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0839,57,Female,Depression,Sertraline,50,53,Insomnia,7.4,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0840,59,Female,Diabetes,Insulin Glargine,50,50,Weight gain,8.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0841,26,Male,Depression,Sertraline,500,53,Drowsiness,7.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0842,67,Female,Diabetes,Glipizide,500,12,Low blood sugar,7,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0843,44,Female,Depression,Escitalopram,500,47,Nausea,6.5,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0844,75,Male,Diabetes,Glipizide,100,24,Nausea,9.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0845,19,Male,Pain Relief,Ibuprofen,250,37,Stomach pain,5.8,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0846,22,Male,Diabetes,Insulin Glargine,500,30,Low sugar,9.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0847,46,Female,Diabetes,Insulin Glargine,50,43,Injection site pain,7.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0848,54,Female,Hypertension,Losartan,50,25,Cough,4.9,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0849,55,Female,Diabetes,Insulin Glargine,50,57,Low sugar,7.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0850,36,Male,Hypertension,Amlodipine,250,53,Fatigue,3.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0851,25,Male,Infection,Azithromycin,50,46,Nausea,7.9,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0852,65,Female,Hypertension,Amlodipine,500,47,Dizziness,8.3,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0853,62,Female,Pain Relief,Tramadol,850,58,Constipation,6.1,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0854,18,Male,Hypertension,Metoprolol,850,45,Dizziness,7.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0855,39,Male,Infection,Amoxicillin,850,13,Diarrhea,9.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0856,69,Male,Pain Relief,Tramadol,500,28,Dizziness,6.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0857,34,Male,Depression,Bupropion,850,41,Anxiety,5.4,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0858,24,Female,Depression,Sertraline,500,53,Drowsiness,9.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0859,42,Male,Hypertension,Metoprolol,50,45,Tiredness,9.9,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0860,62,Female,Hypertension,Losartan,100,21,Cough,7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0861,21,Female,Infection,Amoxicillin,500,28,Rash,8.5,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0862,53,Female,Infection,Ciprofloxacin,100,25,Nausea,9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0863,23,Male,Diabetes,Metformin,50,55,Nausea,5.9,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0864,77,Male,Infection,Azithromycin,50,43,Headache,6.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0865,48,Male,Diabetes,Glipizide,500,59,Low blood sugar,8.8,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0866,36,Male,Pain Relief,Tramadol,250,45,Nausea,9.5,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0867,78,Female,Hypertension,Amlodipine,850,43,Fatigue,7.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0868,61,Male,Pain Relief,Paracetamol,250,17,Rash,5.7,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0869,71,Male,Infection,Azithromycin,850,15,Headache,10,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0870,56,Female,Pain Relief,Ibuprofen,50,50,Stomach pain,6.2,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0871,44,Male,Pain Relief,Paracetamol,850,23,Liver issues,6.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0872,27,Female,Pain Relief,Paracetamol,850,15,Rash,7.5,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0873,43,Female,Infection,Azithromycin,100,17,Nausea,9.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0874,36,Female,Pain Relief,Tramadol,250,50,Nausea,8.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0875,56,Female,Diabetes,Metformin,850,49,Nausea,7.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0876,79,Female,Infection,Ciprofloxacin,50,5,Joint pain,7.7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0877,20,Female,Pain Relief,Ibuprofen,100,44,Nausea,7.1,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0878,62,Female,Infection,Azithromycin,250,48,Headache,7.8,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0879,30,Female,Depression,Sertraline,250,23,Insomnia,3.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0880,67,Male,Diabetes,Insulin Glargine,850,16,Weight gain,6.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0881,45,Male,Pain Relief,Tramadol,250,12,Nausea,7.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0882,79,Male,Depression,Bupropion,850,12,Headache,5.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0883,75,Male,Depression,Escitalopram,500,57,Sleep issues,7.6,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0884,37,Female,Infection,Amoxicillin,250,49,Diarrhea,6.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0885,45,Male,Depression,Bupropion,100,16,Anxiety,9.6,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0886,25,Female,Diabetes,Glipizide,100,52,Low blood sugar,9.4,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0887,78,Male,Diabetes,Glipizide,50,37,Low blood sugar,6.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0888,58,Male,Hypertension,Amlodipine,250,49,Fatigue,6.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0889,56,Male,Diabetes,Metformin,100,30,Nausea,6.9,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0890,18,Female,Depression,Sertraline,100,43,Drowsiness,6.3,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0891,20,Male,Diabetes,Glipizide,250,32,Nausea,7.3,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0892,30,Female,Infection,Ciprofloxacin,500,9,Dizziness,5.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0893,45,Female,Hypertension,Amlodipine,500,12,Fatigue,5.3,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0894,79,Male,Depression,Sertraline,50,29,Dry mouth,7.9,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0895,74,Male,Hypertension,Amlodipine,50,31,Fatigue,7.9,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0896,77,Male,Depression,Bupropion,250,50,Dry mouth,5.8,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0897,66,Female,Infection,Azithromycin,250,27,Nausea,8.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0898,42,Male,Hypertension,Amlodipine,100,34,Dizziness,6.1,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0899,73,Female,Pain Relief,Ibuprofen,850,49,Stomach pain,7.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0900,50,Female,Depression,Sertraline,250,51,Drowsiness,8.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0901,55,Male,Pain Relief,Tramadol,500,27,Dizziness,6.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0902,70,Male,Hypertension,Amlodipine,850,53,Dizziness,7.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0903,23,Female,Pain Relief,Tramadol,100,51,Nausea,6.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0904,75,Female,Pain Relief,Ibuprofen,250,24,Heartburn,6.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0905,61,Female,Hypertension,Amlodipine,250,22,Dizziness,6.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0906,62,Male,Infection,Azithromycin,850,22,Headache,5.9,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0907,49,Female,Pain Relief,Ibuprofen,100,6,Stomach pain,6.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0908,62,Male,Pain Relief,Tramadol,250,8,Dizziness,4.7,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0909,78,Female,Infection,Azithromycin,850,34,Abdominal pain,6.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0910,64,Female,Pain Relief,Paracetamol,100,37,Fatigue,6.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0911,38,Male,Pain Relief,Paracetamol,50,40,Rash,6.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0912,33,Female,Pain Relief,Tramadol,50,22,Nausea,6.6,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0913,71,Male,Diabetes,Metformin,100,41,Stomach upset,6.9,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0914,38,Male,Infection,Amoxicillin,850,23,Rash,7.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0915,28,Female,Pain Relief,Tramadol,250,51,Constipation,8.3,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0916,77,Male,Infection,Ciprofloxacin,500,32,Joint pain,6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0917,54,Male,Depression,Bupropion,850,44,Dry mouth,5.2,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0918,53,Female,Depression,Escitalopram,850,24,Nausea,5.4,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0919,52,Male,Pain Relief,Paracetamol,500,53,Rash,6.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0920,36,Male,Infection,Ciprofloxacin,250,37,Joint pain,6.5,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0921,37,Male,Infection,Ciprofloxacin,500,16,Dizziness,5.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0922,74,Female,Infection,Azithromycin,500,55,Nausea,5.1,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0923,35,Male,Diabetes,Insulin Glargine,500,19,Low sugar,6.3,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0924,64,Female,Depression,Bupropion,100,45,Headache,7.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0925,58,Female,Infection,Ciprofloxacin,250,43,Joint pain,7.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0926,66,Male,Infection,Azithromycin,500,6,Headache,6.2,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0927,31,Male,Diabetes,Insulin Glargine,250,33,Injection site pain,6.4,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0928,32,Male,Diabetes,Insulin Glargine,100,45,Weight gain,5.6,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0929,48,Female,Infection,Ciprofloxacin,850,14,Dizziness,7,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0930,18,Male,Hypertension,Amlodipine,850,6,Fatigue,5.7,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0931,70,Male,Infection,Ciprofloxacin,850,55,Nausea,7.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0932,71,Male,Infection,Ciprofloxacin,50,15,Dizziness,4.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0933,71,Male,Diabetes,Insulin Glargine,500,17,Low sugar,6.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0934,20,Male,Diabetes,Insulin Glargine,850,14,Weight gain,7.5,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0935,33,Female,Infection,Ciprofloxacin,50,18,Dizziness,7.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0936,40,Female,Infection,Ciprofloxacin,250,22,Joint pain,10,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0937,74,Male,Infection,Azithromycin,850,55,Nausea,7.5,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0938,28,Male,Diabetes,Glipizide,850,58,Nausea,5.5,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0939,29,Male,Infection,Amoxicillin,850,13,Rash,6.9,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0940,27,Male,Infection,Ciprofloxacin,100,43,Dizziness,4.3,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0941,49,Female,Pain Relief,Tramadol,250,32,Nausea,6.9,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0942,33,Male,Hypertension,Amlodipine,100,7,Fatigue,5.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0943,25,Female,Depression,Escitalopram,500,24,Nausea,8.4,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0944,55,Female,Hypertension,Losartan,250,10,Back pain,6.2,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0945,29,Male,Pain Relief,Ibuprofen,500,31,Heartburn,6.8,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0946,41,Female,Depression,Escitalopram,850,57,Sweating,6,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0947,45,Female,Infection,Ciprofloxacin,850,6,Joint pain,9.6,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0948,70,Female,Pain Relief,Ibuprofen,850,33,Stomach pain,6.5,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0949,25,Female,Infection,Azithromycin,100,42,Headache,9.7,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0950,75,Male,Diabetes,Insulin Glargine,100,7,Low sugar,8.2,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0951,45,Male,Pain Relief,Ibuprofen,500,20,Heartburn,7.7,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0952,53,Female,Diabetes,Metformin,500,34,Diarrhea,7.6,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0953,43,Male,Pain Relief,Paracetamol,100,44,Rash,7.6,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0954,25,Male,Pain Relief,Ibuprofen,50,6,Nausea,4.1,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0955,75,Male,Diabetes,Glipizide,250,21,Skin rash,6.6,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0956,77,Male,Depression,Bupropion,250,45,Anxiety,8.3,Aminoketone,450,MAOIs|Tramadol|Sertraline,Lowers seizure threshold. Avoid with MAOIs.
+P0957,67,Male,Hypertension,Metoprolol,500,16,Slow heartbeat,6.9,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0958,45,Female,Infection,Ciprofloxacin,850,39,Nausea,4.9,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0959,45,Male,Pain Relief,Paracetamol,50,47,Fatigue,6.9,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0960,54,Male,Infection,Amoxicillin,50,5,Rash,9.6,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0961,58,Male,Diabetes,Insulin Glargine,100,59,Low sugar,8.9,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0962,53,Male,Infection,Azithromycin,500,49,Nausea,6.9,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0963,44,Female,Diabetes,Glipizide,250,19,Nausea,8.4,Sulfonylurea,20,Fluconazole|Ibuprofen|Warfarin,Risk of hypoglycemia. Monitor blood sugar closely.
+P0964,71,Female,Infection,Amoxicillin,250,30,Diarrhea,6.5,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0965,34,Female,Hypertension,Metoprolol,100,41,Tiredness,4.4,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0966,26,Female,Hypertension,Losartan,50,25,Back pain,5.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0967,50,Male,Hypertension,Amlodipine,500,53,Fatigue,9.3,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0968,70,Female,Hypertension,Amlodipine,850,35,Dizziness,6.6,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0969,37,Male,Hypertension,Amlodipine,500,29,Dizziness,6.6,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0970,30,Male,Hypertension,Losartan,500,27,Back pain,6.6,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0971,45,Male,Diabetes,Metformin,50,28,Stomach upset,9.9,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0972,65,Male,Pain Relief,Tramadol,250,42,Dizziness,9.4,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0973,46,Male,Infection,Ciprofloxacin,100,32,Dizziness,10,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0974,30,Female,Hypertension,Amlodipine,850,25,Swelling,6.8,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0975,63,Female,Diabetes,Metformin,50,58,Nausea,7.4,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0976,52,Female,Diabetes,Metformin,50,47,Stomach upset,4.7,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0977,78,Female,Diabetes,Metformin,500,22,Nausea,9.2,Biguanide,1000,Alcohol|Ciprofloxacin|Iodine Contrast,Hold before contrast imaging. Risk of lactic acidosis.
+P0978,23,Male,Pain Relief,Tramadol,50,40,Constipation,5.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0979,35,Female,Infection,Amoxicillin,100,39,Allergy,7.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0980,68,Male,Pain Relief,Ibuprofen,100,49,Heartburn,5.4,NSAID,400,Aspirin|Warfarin|Losartan,Avoid in renal impairment and GI ulcer patients.
+P0981,22,Female,Depression,Sertraline,50,59,Insomnia,6.1,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0982,64,Male,Diabetes,Insulin Glargine,100,13,Weight gain,5.7,Insulin,100,Metformin|Ciprofloxacin,Monitor glucose. Risk of hypoglycemia if overdosed.
+P0983,42,Male,Depression,Escitalopram,850,57,Sleep issues,6.1,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P0984,19,Female,Hypertension,Metoprolol,100,42,Slow heartbeat,6.2,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.
+P0985,27,Male,Hypertension,Losartan,50,34,Back pain,6.2,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0986,73,Male,Pain Relief,Paracetamol,500,48,Fatigue,8.3,Analgesic,500,Warfarin|Alcohol|Isoniazid,Avoid in liver disease. Risk of hepatotoxicity.
+P0987,47,Female,Infection,Amoxicillin,850,38,Allergy,5.3,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0988,67,Male,Depression,Sertraline,100,36,Insomnia,7.3,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0989,76,Female,Infection,Ciprofloxacin,500,7,Dizziness,8.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0990,62,Female,Pain Relief,Tramadol,500,7,Constipation,6.2,Opioid,100,Sertraline|Bupropion|MAOIs,Risk of seizures and serotonin syndrome. Addictive.
+P0991,22,Female,Hypertension,Amlodipine,850,32,Fatigue,5.9,Calcium Channel Blocker,10,Simvastatin|Cyclosporine,Do not exceed 10mg/day. Risk of edema.
+P0992,72,Male,Infection,Amoxicillin,250,48,Rash,6.7,Penicillin,500,Warfarin|Methotrexate,Contraindicated in Penicillin allergy.
+P0993,73,Male,Infection,Ciprofloxacin,250,19,Nausea,8.8,Fluoroquinolone,500,Warfarin|Antacids|Metformin,Avoid in patients under 18. Risk of tendon rupture.
+P0994,50,Male,Hypertension,Losartan,250,45,Headache,7.3,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0995,71,Female,Depression,Sertraline,500,27,Drowsiness,6.2,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0996,18,Male,Hypertension,Losartan,100,44,Headache,7.7,ARB,100,Ibuprofen|Potassium|Spironolactone,Avoid NSAIDs. Risk of hyperkalemia.
+P0997,35,Female,Infection,Azithromycin,50,15,Nausea,5.3,Macrolide,500,Warfarin|Digoxin|Amiodarone,Risk of QT prolongation. Avoid in heart patients.
+P0998,49,Female,Depression,Sertraline,850,52,Dry mouth,8,SSRI,200,MAOIs|Tramadol|Bupropion,Risk of serotonin syndrome with other SSRIs or MAOIs.
+P0999,64,Male,Depression,Escitalopram,850,36,Nausea,7.6,SSRI,20,MAOIs|Tramadol|Bupropion,Do not combine with MAOIs. Risk of serotonin syndrome.
+P1000,66,Female,Hypertension,Metoprolol,500,58,Tiredness,6.5,Beta Blocker,200,Verapamil|Clonidine|Amlodipine,Do not stop abruptly. Risk of rebound hypertension.

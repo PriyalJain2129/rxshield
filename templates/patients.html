@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts — MedGuard CPOE</title>
+    {% include 'styles.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="container">
+    <div class="page-header">
+        <div>
+            <h1>🚨 Safety Alerts</h1>
+            <p>All warnings triggered by the clinical decision support engine</p>
+        </div>
+    </div>
+    <div class="card" style="padding:0; overflow:hidden;">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Patient ID</th>
+                        <th>Drug</th>
+                        <th>Alert Type</th>
+                        <th>Message</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in alerts %}
+                    <tr>
+                        <td style="color:var(--subtext);">{{ a['alert_id'] }}</td>
+                        <td><strong>{{ a['patient_id'] }}</strong></td>
+                        <td>{{ a['ordered_drug'] }}</td>
+                        <td>
+                            <span class="badge {{ 'badge-danger' if '🚨' in a['alert_type'] else 'badge-warning' }}">
+                                {{ a['alert_type'] }}
+                            </span>
+                        </td>
+                        <td style="font-size:12.5px; max-width:300px;">{{ a['alert_message'] }}</td>
+                        <td style="color:var(--subtext); font-size:12px;">{{ a['timestamp'] }}</td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="6" style="text-align:center; padding:40px; color:var(--subtext);">
+                        No alerts yet — great job! 🎉
+                    </td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — MedGuard CPOE</title>
+    {% include 'styles.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<div class="container">
+    <div class="card">
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-avatar-lg">
+                {{ user['name'][0].upper() }}
+            </div>
+            <div class="profile-info">
+                <h2>{{ user['name'] }}</h2>
+                <p>{{ user['email'] }}</p>
+                <div class="profile-badge">🩺 {{ user['role'] }}</div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid" style="margin-bottom: 28px;">
+            <div class="stat-card">
+                <div class="stat-icon teal">📋</div>
+                <div>
+                    <div class="stat-value">{{ order_count }}</div>
+                    <div class="stat-label">Orders Submitted</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">🚨</div>
+                <div>
+                    <div class="stat-value">{{ alert_count }}</div>
+                    <div class="stat-label">Alerts Generated</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <h3 style="font-size:16px; color:var(--c5); margin-bottom:16px; font-weight:600;">
+            Account Information
+        </h3>
+
+        <table style="font-size:14px;">
+            <tr>
+                <td style="padding:10px 0; color:var(--subtext); width:160px; border:none;">Full Name</td>
+                <td style="padding:10px 0; font-weight:500; border:none;">{{ user['name'] }}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px 0; color:var(--subtext); border-top: 1px solid var(--c1);">Email</td>
+                <td style="padding:10px 0; font-weight:500; border-top: 1px solid var(--c1);">{{ user['email'] }}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px 0; color:var(--subtext); border-top: 1px solid var(--c1);">Role</td>
+                <td style="padding:10px 0; font-weight:500; border-top: 1px solid var(--c1);">{{ user['role'] }}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px 0; color:var(--subtext); border-top: 1px solid var(--c1);">Member Since</td>
+                <td style="padding:10px 0; font-weight:500; border-top: 1px solid var(--c1);">{{ user['created_at'][:10] }}</td>
+            </tr>
+        </table>
+
+        <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--c2);">
+            <a href="/logout" class="btn btn-outline" style="width: auto; padding: 10px 24px;">
+                🚪 Sign Out
+            </a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
