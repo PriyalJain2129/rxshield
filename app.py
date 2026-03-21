@@ -333,7 +333,15 @@ def init_db():
     conn.close()
     print("✅ Database ready")
 
-init_db()
+# ── Lazy init — runs on first request only ────────────────────────
+db_initialized = False
+
+@app.before_request
+def initialize():
+    global db_initialized
+    if not db_initialized:
+        init_db()
+        db_initialized = True
 
 # ═════════════════════════════════════════════════════════════════
 # AUTH ROUTES
