@@ -334,11 +334,7 @@ def init_db():
     print("✅ Database ready")
 
 # ── Lazy init — runs on first request only ────────────────────────
-@app.route('/health')
-def health():
-    init_db()
-    return 'OK', 200
-
+init_db()
 # ═════════════════════════════════════════════════════════════════
 # AUTH ROUTES
 # ═════════════════════════════════════════════════════════════════
