@@ -101,10 +101,11 @@ async function loginUser() {
     btn.textContent = 'Signing in...';
     btn.disabled    = true;
 
-    const res  = await fetch('/api/login', {
-        method : 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify({ email, password })
+    const res = await fetch('/api/login', {
+    method : 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body   : JSON.stringify({ email, password })
     });
     const data = await res.json();
 
