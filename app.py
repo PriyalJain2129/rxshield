@@ -16,7 +16,7 @@ app.secret_key = os.getenv('SECRET_KEY', 'cpoe_secret_key_rknec_2024')
 # ── Production session config for Render (HTTPS + proxy) ─────────
 app.config['SESSION_COOKIE_SECURE']   = True
 app.config['SESSION_COOKIE_HTTPONLY'] = True
-app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.config['SESSION_COOKIE_NAME']     = 'rxshield_session'
 
 # ── Tell Flask it's behind Render's proxy ─────────────────────────
