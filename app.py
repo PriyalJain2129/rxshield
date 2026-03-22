@@ -199,6 +199,7 @@ if USE_POSTGRES:
     # Render sometimes gives 'postgres://' but psycopg2 needs 'postgresql://'
     if DATABASE_URL.startswith('postgres://'):
         DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://', 1)
+    DATABASE_URL = DATABASE_URL.strip()  # remove hidden spaces
 
 def get_db():
     if USE_POSTGRES:
