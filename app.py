@@ -13,6 +13,16 @@ from email.mime.text import MIMEText
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'cpoe_secret_key_rknec_2024')
 
+# ── Production session config for Render (HTTPS + proxy) ─────────
+app.config['SESSION_COOKIE_SECURE']   = True
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_COOKIE_NAME']     = 'rxshield_session'
+
+# ── Tell Flask it's behind Render's proxy ─────────────────────────
+from werkzeug.middleware.proxy_fix import ProxyFix
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
+
 # ── Email config — loaded from .env ──────────────────────────────
 from dotenv import load_dotenv
 load_dotenv()
@@ -201,7 +211,14 @@ if USE_POSTGRES:
 
 def get_db():
     if USE_POSTGRES:
-        conn = psycopg2.connect(DATABASE_URL)
+        conn = psycopg2.connect(
+            DATABASE_URL,
+            connect_timeout=60,
+            keepalives=1,
+            keepalives_idle=30,
+            keepalives_interval=10,
+            keepalives_count=5
+        )
         return conn
     else:
         import sqlite3
