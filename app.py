@@ -334,7 +334,8 @@ def init_db():
     print("✅ Database ready")
 
 # ── Lazy init — runs on first request only ────────────────────────
-init_db()
+if not USE_POSTGRES:
+    init_db()
 # ═════════════════════════════════════════════════════════════════
 # AUTH ROUTES
 # ═════════════════════════════════════════════════════════════════
