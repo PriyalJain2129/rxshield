@@ -190,16 +190,14 @@ def send_welcome_email_async(to_email, name, role):
     thread.start()
 
 # ── Database setup — PostgreSQL on Render, SQLite locally ─────────
-DATABASE_URL = os.getenv('DATABASE_URL', '')
+DATABASE_URL = os.getenv('DATABASE_URL', '').strip()
 USE_POSTGRES = bool(DATABASE_URL)
 
 if USE_POSTGRES:
     import psycopg2
     import psycopg2.extras
-    # Render sometimes gives 'postgres://' but psycopg2 needs 'postgresql://'
     if DATABASE_URL.startswith('postgres://'):
         DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://', 1)
-    DATABASE_URL = DATABASE_URL.strip()  # remove hidden spaces
 
 def get_db():
     if USE_POSTGRES:
@@ -334,9 +332,11 @@ def init_db():
     conn.close()
     print("✅ Database ready")
 
-# ── Lazy init — runs on first request only ────────────────────────
+# ── On startup: only init SQLite locally, skip on PostgreSQL ─────
+# Tables already created manually in Supabase
 if not USE_POSTGRES:
     init_db()
+
 # ═════════════════════════════════════════════════════════════════
 # AUTH ROUTES
 # ═════════════════════════════════════════════════════════════════
