@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alerts — MedGuard CPOE</title>
+    <title>Alerts — RxShield</title>
     {% include 'styles.html' %}
 </head>
 <body>
 {% include 'navbar.html' %}
+
 <div class="container">
     <div class="page-header">
         <div>
@@ -15,8 +16,10 @@
             <p>All warnings triggered by the clinical decision support engine</p>
         </div>
     </div>
+
     <div class="card" style="padding:0; overflow:hidden;">
-        <div class="table-wrap">
+        <!-- 🔥 Scrollable table with height limit -->
+        <div class="table-wrap" style="max-height: 520px; overflow:auto;">
             <table>
                 <thead>
                     <tr>
@@ -29,7 +32,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for a in alerts %}
+                    <!-- 🔥 Limit to 100 rows to prevent lag -->
+                    {% for a in alerts[:100] %}
                     <tr>
                         <td style="color:var(--subtext);">{{ a['alert_id'] }}</td>
                         <td><strong>{{ a['patient_id'] }}</strong></td>
@@ -39,18 +43,33 @@
                                 {{ a['alert_type'] }}
                             </span>
                         </td>
-                        <td style="font-size:12.5px; max-width:300px;">{{ a['alert_message'] }}</td>
-                        <td style="color:var(--subtext); font-size:12px;">{{ a['timestamp'] }}</td>
+                        <td style="font-size:12.5px; max-width:300px; line-height:1.4;">
+                            {{ a['alert_message'] }}
+                        </td>
+                        <td style="color:var(--subtext); font-size:12px; white-space:nowrap;">
+                            {{ a['timestamp'][:19].replace('T', ' ') if a['timestamp'] else '' }}
+                        </td>
                     </tr>
                     {% else %}
-                    <tr><td colspan="6" style="text-align:center; padding:40px; color:var(--subtext);">
-                        No alerts yet — great job! 🎉
-                    </td></tr>
+                    <tr>
+                        <td colspan="6" style="text-align:center; padding:60px 20px; color:var(--subtext);">
+                            <div style="font-size:48px; margin-bottom:12px;">✅</div>
+                            <div style="font-size:18px; margin-bottom:8px;">No alerts yet</div>
+                            <p style="margin:0;">Great job! All recent medication orders are safe. 🎉</p>
+                        </td>
+                    </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
+
+    <!-- Show count if there are more than 100 alerts -->
+    {% if alerts and alerts|length > 100 %}
+    <div style="text-align:center; margin-top:12px; color:var(--subtext); font-size:13px;">
+        Showing latest 100 alerts • Total: {{ alerts|length }}
+    </div>
+    {% endif %}
 </div>
 </body>
 </html>

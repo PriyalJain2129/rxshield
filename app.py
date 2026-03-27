@@ -1,4 +1,4 @@
-# app.py - Full CPOE System with Authentication + All Features
+# app.py - Full CPOE System with Authentication + All Features (Optimized)
 
 from flask import Flask, request, jsonify, render_template, session, redirect, url_for
 import sqlite3
@@ -13,21 +13,24 @@ from email.mime.text import MIMEText
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'cpoe_secret_key_rknec_2024')
 
-# ── Production session config for Render (HTTPS + proxy) ─────────
+# ── Production session config (Fixed for better compatibility) ─────────
 app.config['SESSION_COOKIE_SECURE']   = True
 app.config['SESSION_COOKIE_HTTPONLY'] = True
-app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'          # ← FIX 6
 app.config['SESSION_COOKIE_NAME']     = 'rxshield_session'
 
-# ── Tell Flask it's behind Render's proxy ─────────────────────────
+# ── Tell Flask it's behind proxy (Railway/Render) ─────────────────────────
 from werkzeug.middleware.proxy_fix import ProxyFix
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
-# ── Email config — loaded from .env ──────────────────────────────
+# ── Email config ──────────────────────────────
 from dotenv import load_dotenv
 load_dotenv()
 SENDER_EMAIL    = os.getenv('SENDER_EMAIL', '')
 SENDER_PASSWORD = os.getenv('SENDER_PASSWORD', '')
+
+# ── Global DB Connection (FIX 1 - Big performance boost) ───────────────
+conn_global = None
 
 # ── Helper: send welcome email ────────────────────────────────────
 def send_welcome_email(to_email, name, role):
@@ -181,8 +184,8 @@ def send_welcome_email(to_email, name, role):
 
         msg.attach(MIMEText(html, 'html'))
 
-        # Connect to Gmail and send
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        # Faster SMTP connection with timeout (FIX 3)
+        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=5)
         server.starttls()
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
         server.sendmail(SENDER_EMAIL, to_email, msg.as_string())
@@ -190,16 +193,15 @@ def send_welcome_email(to_email, name, role):
         print(f"✅ Welcome email sent to {to_email}")
 
     except Exception as e:
-        # Email failing should NOT break signup — just log it
         print(f"⚠️ Email failed: {e}")
 
 def send_welcome_email_async(to_email, name, role):
-    """Send email in background thread so signup is never blocked"""
+    """Send email in background thread"""
     thread = threading.Thread(target=send_welcome_email, args=(to_email, name, role))
     thread.daemon = True
     thread.start()
 
-# ── Database setup — PostgreSQL on Render, SQLite locally ─────────
+# ── Database setup — PostgreSQL on Railway, SQLite locally ─────────
 DATABASE_URL = os.getenv('DATABASE_URL', '').strip()
 USE_POSTGRES = bool(DATABASE_URL)
 
@@ -209,30 +211,30 @@ if USE_POSTGRES:
     if DATABASE_URL.startswith('postgres://'):
         DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://', 1)
 
+# 🔥 FIX 1: Global DB Connection
 def get_db():
+    global conn_global
+
+    if conn_global is not None:
+        return conn_global
+
     if USE_POSTGRES:
-        conn = psycopg2.connect(
+        conn_global = psycopg2.connect(
             DATABASE_URL,
-            connect_timeout=60,
-            keepalives=1,
-            keepalives_idle=30,
-            keepalives_interval=10,
-            keepalives_count=5
+            connect_timeout=10
         )
-        return conn
+        conn_global.autocommit = True
     else:
-        import sqlite3
         DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hospital.db')
-        conn = sqlite3.connect(DB_PATH)
-        conn.row_factory = sqlite3.Row
-        return conn
+        conn_global = sqlite3.connect(DB_PATH, check_same_thread=False)
+        conn_global.row_factory = sqlite3.Row
+
+    return conn_global
 
 def db_execute(conn, query, params=(), fetchone=False, fetchall=False):
     """Universal query executor for both PostgreSQL and SQLite"""
     if USE_POSTGRES:
-        # PostgreSQL uses %s placeholders, SQLite uses ?
         query = query.replace('?', '%s')
-        # PostgreSQL uses SERIAL instead of AUTOINCREMENT
         cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     else:
         cur = conn.cursor()
@@ -266,10 +268,10 @@ def get_current_user():
     conn = get_db()
     user = db_execute(conn,
         'SELECT * FROM users WHERE user_id = ?', (session['user_id'],), fetchone=True)
-    conn.close()
+    # NO conn.close() - Global connection
     return user
 
-# ── Init DB — runs once on startup ───────────────────────────────
+# ── Init DB — runs on startup (FIX 2) ───────────────────────────────
 def init_db():
     conn = get_db()
     cur  = conn.cursor()
@@ -324,7 +326,7 @@ def init_db():
     # Load CSV if patients table is empty
     cur.execute('SELECT COUNT(*) FROM patients')
     count = cur.fetchone()
-    count = count[0] if isinstance(count, tuple) else list(count.values())[0]
+    count = count[0] if isinstance(count, tuple) else list(count.values())[0] if count else 0
 
     if count == 0:
         csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'real_drug_dataset_updated.csv')
@@ -346,13 +348,11 @@ def init_db():
             print("⚠️ CSV not found")
 
     conn.commit()
-    conn.close()
+    # NO conn.close() - Global connection
     print("✅ Database ready")
 
-# ── On startup: only init SQLite locally, skip on PostgreSQL ─────
-# Tables already created manually in Supabase
-if not USE_POSTGRES:
-    init_db()
+# 🔥 FIX 2: Always run init_db() (important for Railway Postgres)
+init_db()
 
 # ═════════════════════════════════════════════════════════════════
 # AUTH ROUTES
@@ -372,6 +372,8 @@ def signup_page():
 
 @app.route('/api/signup', methods=['POST'])
 def signup():
+    print("SIGNUP HIT:", request.get_json().get('email'))   # ← FIX 4: Debug log
+
     data     = request.get_json()
     name     = data.get('name', '').strip()
     email    = data.get('email', '').strip().lower()
@@ -387,7 +389,6 @@ def signup():
     try:
         existing = db_execute(conn, 'SELECT * FROM users WHERE email = ?', (email,), fetchone=True)
         if existing:
-            conn.close()
             return jsonify({'status': 'error', 'message': 'An account with this email already exists.'})
 
         hashed = hash_password(password)
@@ -399,12 +400,10 @@ def signup():
         session['user_id']   = user['user_id']
         session['user_name'] = user['name']
         session['user_role'] = user['role']
-        conn.close()
 
         send_welcome_email_async(email, name, role)
         return jsonify({'status': 'success', 'message': f'Welcome, {name}!'})
     except Exception as e:
-        conn.close()
         return jsonify({'status': 'error', 'message': str(e)})
 
 @app.route('/api/login', methods=['POST'])
@@ -420,7 +419,6 @@ def login():
     hashed = hash_password(password)
     user   = db_execute(conn, 'SELECT * FROM users WHERE email = ? AND password = ?',
                         (email, hashed), fetchone=True)
-    conn.close()
 
     if not user:
         return jsonify({'status': 'error', 'message': 'Invalid email or password.'})
@@ -443,7 +441,6 @@ def profile_page():
     conn = get_db()
     order_count = db_execute(conn, 'SELECT COUNT(*) FROM orders', fetchone=True)
     alert_count = db_execute(conn, 'SELECT COUNT(*) FROM alerts', fetchone=True)
-    conn.close()
     order_count = list(order_count.values())[0] if isinstance(order_count, dict) else order_count[0]
     alert_count = list(alert_count.values())[0] if isinstance(alert_count, dict) else alert_count[0]
     return render_template('profile.html', user=user,
@@ -452,7 +449,7 @@ def profile_page():
                            page='profile')
 
 # ═════════════════════════════════════════════════════════════════
-# PAGE ROUTES (all protected — must be logged in)
+# PAGE ROUTES
 # ═════════════════════════════════════════════════════════════════
 
 @app.route('/')
@@ -468,9 +465,10 @@ def home():
     drugs_patients   = db_execute(conn, 'SELECT DISTINCT current_drug FROM patients ORDER BY current_drug', fetchall=True)
     drugs_table      = db_execute(conn, 'SELECT drug_name FROM drugs ORDER BY drug_name', fetchall=True)
     all_drugs        = sorted(set(
-        [r['current_drug'] for r in drugs_patients] +
-        [r['drug_name']    for r in drugs_table]
+        [r['current_drug'] for r in drugs_patients if isinstance(r, dict)] +
+        [r['drug_name']    for r in drugs_table if isinstance(r, dict)]
     ))
+
     def get_count(query):
         row = db_execute(conn, query, fetchone=True)
         return list(row.values())[0] if isinstance(row, dict) else row[0]
@@ -479,7 +477,7 @@ def home():
     total_orders   = get_count('SELECT COUNT(*) FROM orders')
     total_alerts   = get_count('SELECT COUNT(*) FROM alerts')
     approved       = get_count("SELECT COUNT(*) FROM orders WHERE status='APPROVED'")
-    conn.close()
+    
     return render_template('index.html',
                            patients=patients, drugs=all_drugs,
                            total_patients=total_patients,
@@ -502,7 +500,6 @@ def orders_page():
     if not is_logged_in(): return redirect(url_for('login_page'))
     conn   = get_db()
     orders = db_execute(conn, 'SELECT * FROM orders ORDER BY timestamp DESC', fetchall=True)
-    conn.close()
     return render_template('orders.html', orders=orders, page='orders')
 
 @app.route('/alerts')
@@ -510,7 +507,6 @@ def alerts_page():
     if not is_logged_in(): return redirect(url_for('login_page'))
     conn   = get_db()
     alerts = db_execute(conn, 'SELECT * FROM alerts ORDER BY timestamp DESC', fetchall=True)
-    conn.close()
     return render_template('alerts.html', alerts=alerts, page='alerts')
 
 @app.route('/patients')
@@ -518,7 +514,6 @@ def patients_page():
     if not is_logged_in(): return redirect(url_for('login_page'))
     conn     = get_db()
     patients = db_execute(conn, 'SELECT * FROM patients', fetchall=True)
-    conn.close()
     return render_template('patients.html', patients=patients, page='patients')
 
 # ═════════════════════════════════════════════════════════════════
@@ -545,11 +540,9 @@ def save_patient():
             int(data['max_safe_dose']), data['interacts_with'],
             data.get('clinical_warning', 'None')))
         conn.commit()
-        conn.close()
         return jsonify({'status': 'success', 'patient_id': new_id,
                         'message': f'Patient {new_id} added successfully!'})
     except Exception as e:
-        conn.close()
         return jsonify({'status': 'error', 'message': str(e)})
 
 @app.route('/save-drug', methods=['POST'])
@@ -565,10 +558,8 @@ def save_drug():
             (data['drug_name'], data['allergy_class'], int(data['max_safe_dose']),
              data['interacts_with'], data['clinical_warning']))
         conn.commit()
-        conn.close()
         return jsonify({'status': 'success', 'message': f"{data['drug_name']} added!"})
     except Exception as e:
-        conn.close()
         return jsonify({'status': 'error', 'message': str(e)})
 
 @app.route('/check-order', methods=['POST'])
@@ -585,7 +576,6 @@ def check_order():
         'SELECT * FROM patients WHERE patient_id = ?', (patient_id,), fetchone=True)
 
     if not patient:
-        conn.close()
         return jsonify({'status': 'error', 'message': 'Patient not found'})
 
     drug_info = db_execute(conn,
@@ -597,7 +587,6 @@ def check_order():
             (ordered_drug,), fetchone=True)
 
     if not drug_info:
-        conn.close()
         return jsonify({
             'status' : 'warning',
             'message': f'⚠️ Drug "{ordered_drug}" not found in database.',
@@ -615,29 +604,29 @@ def check_order():
         alert_level = 'danger'
 
     # Rule 2: Allergy
-    if drug_info['allergy_class'] and patient['allergy_class']:
-        if drug_info['allergy_class'].lower() == patient['allergy_class'].lower() \
-                and ordered_drug.lower() != patient['current_drug'].lower():
+    if drug_info.get('allergy_class') and patient.get('allergy_class'):
+        if str(drug_info['allergy_class']).lower() == str(patient['allergy_class']).lower() \
+                and ordered_drug.lower() != str(patient['current_drug']).lower():
             alerts.append({'type': '🚨 ALLERGY ALERT',
                            'message': f"Patient sensitive to {patient['allergy_class']} class. {ordered_drug} is same class!"})
             alert_level = 'danger'
 
     # Rule 3: Interaction
-    interactions = [i.strip().lower() for i in drug_info['interacts_with'].split('|')]
-    if patient['current_drug'].strip().lower() in interactions:
+    interactions = [i.strip().lower() for i in str(drug_info.get('interacts_with', '')).split('|')]
+    if str(patient.get('current_drug', '')).strip().lower() in interactions:
         alerts.append({'type': '⚠️ DRUG INTERACTION',
-                       'message': f"{ordered_drug} interacts with {patient['current_drug']}. {drug_info['clinical_warning']}"})
+                       'message': f"{ordered_drug} interacts with {patient['current_drug']}. {drug_info.get('clinical_warning', '')}"})
         if alert_level != 'danger': alert_level = 'warning'
 
     # Rule 4: Elderly
     risky_elderly = ['ibuprofen','tramadol','ciprofloxacin','glipizide','metoprolol','amlodipine']
-    if patient['age'] > 65 and ordered_drug.lower() in risky_elderly:
+    if patient.get('age', 0) > 65 and ordered_drug.lower() in risky_elderly:
         alerts.append({'type': '⚠️ ELDERLY RISK',
                        'message': f"Patient is {patient['age']} yrs. {ordered_drug} has higher risk for 65+ patients."})
         if alert_level != 'danger': alert_level = 'warning'
 
     # Rule 5: Duplicate
-    if ordered_drug.lower() == patient['current_drug'].lower():
+    if ordered_drug.lower() == str(patient.get('current_drug', '')).lower():
         alerts.append({'type': '⚠️ DUPLICATE ORDER',
                        'message': f"Patient already on {patient['current_drug']}. Possible duplicate!"})
         if alert_level != 'danger': alert_level = 'warning'
@@ -656,7 +645,6 @@ def check_order():
             'INSERT INTO alerts (patient_id, ordered_drug, alert_type, alert_message) VALUES (?, ?, ?, ?)',
             (patient_id, ordered_drug, alert['type'], alert['message']))
     conn.commit()
-    conn.close()
 
     if alert_level == 'safe':
         return jsonify({'status': 'safe',
