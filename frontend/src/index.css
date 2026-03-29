@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 135 23% 89%; /* Light Silver #CEE5D6 */
+    --foreground: 203 69% 20%; /* Prussian Blue #103A57 */
+
+    --card: 162 28% 74%; /* Pastel Blue #A9D3C5 */
+    --card-foreground: 203 69% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 203 69% 20%;
+
+    --primary: 203 69% 20%; /* Prussian Blue #103A57 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 192 48% 37%; /* Teal Blue #307B8E */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 135 23% 89%;
+    --muted-foreground: 203 40% 35%;
+
+    --accent: 162 28% 74%; /* Pastel Blue */
+    --accent-foreground: 203 69% 20%;
+
+    --success: 108 44% 29%; /* Mughal Green #366B2B */
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 162 20% 70%;
+    --input: 162 20% 78%;
+    --ring: 192 48% 37%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 203 69% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 192 48% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 69% 28%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 203 50% 30%;
+    --sidebar-ring: 192 48% 37%;
+
+    --font-heading: 'DM Serif Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .card-surface {
+    @apply bg-white/80 backdrop-blur-sm border border-border/50 rounded-xl shadow-sm;
+  }
+}
