@@ -4,6 +4,7 @@ from datetime import datetime
 
 from flask import Flask, request, jsonify, session
 from flask_cors import CORS
+from werkzeug.security import generate_password_hash
 
 from database import db_execute
 
@@ -11,16 +12,27 @@ app = Flask(__name__)
 app.secret_key = "rxshield_secret_key_2026"
 
 
-CORS(app, supports_credentials=True, origins=[
-    "http://localhost:8080",
-    "https://rx-shield.vercel.app"
-])
+# CORS: target ONLY API routes and explicitly allow the Vercel origin.
+CORS(
+    app,
+    supports_credentials=True,
+    resources={
+        r"/api/*": {
+            "origins": [
+                "https://rx-shield.vercel.app",
+                "http://localhost:8080",
+            ]
+        }
+    },
+)
 
 # --- 1. AUTHENTICATION ---
 
-@app.route('/api/login', methods=['POST'])
+@app.route('/api/login', methods=['POST', 'OPTIONS'])
 def login():
     try:
+        if request.method == "OPTIONS":
+            return "", 200
         data = request.get_json(force=True)
         email = data.get('email', '').lower().strip()
         users = db_execute("SELECT * FROM users WHERE email = %s", (email,))
@@ -29,6 +41,41 @@ def login():
             session['user_id'] = user.get('user_id') or user.get('id')
             return jsonify({"status": "success", "user": {"name": user['name']}})
         return jsonify({"status": "error"}), 401
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route('/api/signup', methods=['POST', 'OPTIONS'])
+def signup():
+    try:
+        if request.method == "OPTIONS":
+            return "", 200
+        data = request.get_json(force=True)
+        name = str(data.get("name", "")).strip()
+        email = str(data.get("email", "")).lower().strip()
+        password = str(data.get("password", "")).strip()
+
+        if not name or not email or not password:
+            return jsonify({"status": "error", "message": "Missing name/email/password"}), 400
+
+        existing = db_execute("SELECT * FROM users WHERE email = %s", (email,))
+        if existing:
+            return jsonify({"status": "error", "message": "Email already exists"}), 409
+
+        password_hash = generate_password_hash(password)
+        db_execute(
+            "INSERT INTO users (name, email, password, role) VALUES (%s, %s, %s, %s)",
+            (name, email, password_hash, "Doctor"),
+            is_select=False,
+        )
+
+        user = db_execute("SELECT * FROM users WHERE email = %s", (email,))
+        if not user:
+            return jsonify({"status": "error", "message": "User not found after signup"}), 500
+
+        u = user[0]
+        session["user_id"] = u.get("user_id") or u.get("id")
+        return jsonify({"status": "success", "user": {"name": u["name"], "email": u.get("email")}})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 

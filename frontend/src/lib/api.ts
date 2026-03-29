@@ -1,6 +1,10 @@
 /** Same-origin in dev (Vite proxy) so Flask session cookies work; direct URL for production builds. */
 // Replace your line 2 with this:
-const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "/api" : "http://127.0.0.1:5000/api");
+const rawApiBaseUrl =
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.DEV ? "/api" : "http://127.0.0.1:5000/api");
+// Ensure Vercel/Render env values never end with a trailing slash (e.g. ".../api/").
+const API_BASE_URL = rawApiBaseUrl.replace(/\/+$/, "");
 
 const fetchOpts: RequestInit = { credentials: "include" };
 
